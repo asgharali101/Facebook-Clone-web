@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.site-container {
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px; /* Set the width of the scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #4f4f4f; /* Set the color of the scrollbar thumb */
+  border-radius: 4px; /* Optional: Set border radius */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: #ccc; /* Set the color of the scrollbar track */
+}
+
+.custom-scrollbar:hover::-webkit-scrollbar-thumb {
+  background-color: rgb(
+    180,
+    180,
+    180
+  ); /* Set the color of the scrollbar thumb on hover */
+}
+
+.custom-scrollbar:hover::-webkit-scrollbar-track {
+  background-color: #f0f0f0ca; /* Set the color of the scrollbar track on hover */
+}
+
+.like-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.like-icon {
+  font-size: 24px;
+}
+
+.liked {
+  color: blue;
+}

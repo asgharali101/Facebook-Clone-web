@@ -1,0 +1,3307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/images/facebook.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook Clone</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="bg-gray-100">
+    <header class="mx-auto bg-white">
+      <nav
+        class="fixed max-w-full bg-white container mx-auto px-8 z-10 py-[5px] shadow flex lg:justify-around items-center"
+      >
+        <div class="relative flex justify-center items-center gap-x-3">
+          <img
+            class="bg-blue-800 w-10 h-10 rounded-full"
+            src="/images/facebook.png"
+            alt=""
+          />
+          <img
+            class="absolute top-3 left-10 w-4 h-4"
+            src="images/search-interface-symbol.png"
+            alt=""
+          />
+          <div class="lg:block xs:hidden">
+            <input
+              class="bg-gray-100 text-base placeholder:text-gray-800 rounded-full w-60 h-10 px-7 focus:outline-none"
+              type="text"
+              placeholder="Search Facebook"
+            />
+          </div>
+        </div>
+
+        <!-- 2nd tab -->
+        <div class="mx-auto container hidden lg:block">
+          <div class="flex items-center justify-center">
+            <div
+              class="px-12 cursor-pointer py-2 hover:rounded-md hover:rounded-b-none hover:bg-gray-100 border-indigo-400 border-b-[3px]"
+            >
+              <img class="w-7 h-7" src="/images/home.png" alt="" />
+            </div>
+
+            <div
+              class="px-12 mx-1 cursor-pointer py-2 rounded hover:bg-gray-100"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-7 h-7 text-gray-700"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3 3v1.5M3 21v-6m0 0 2.77-.693a9 9 0 0 1 6.208.682l.108.054a9 9 0 0 0 6.086.71l3.114-.732a48.524 48.524 0 0 1-.005-10.499l-3.11.732a9 9 0 0 1-6.085-.711l-.108-.054a9 9 0 0 0-6.208-.682L3 4.5M3 15V4.5"
+                />
+              </svg>
+            </div>
+
+            <div
+              class="px-12 mx-1 cursor-pointer py-2 rounded hover:bg-gray-100"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-7 h-7 text-gray-700"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z"
+                />
+              </svg>
+            </div>
+
+            <div
+              class="px-12 mx-1 cursor-pointer py-2 rounded hover:bg-gray-100"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-7 h-7 text-gray-700"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205 3 1m1.5.5-1.5-.5M6.75 7.364V3h-3v18m3-13.636 10.5-3.819"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <!-- 3RD TAB -->
+        <div class="w-1/4 flex items-center justify-end space-x-3">
+          <div
+            class="mx-1 p-2 rounded-full cursor-pointer bg-gray-200 hover:bg-gray-300"
+          >
+            <img
+              class="w-6 h-6"
+              src="/images/icons8-circled-menu-96.png"
+              alt=""
+            />
+          </div>
+
+          <div
+            class="mx-1 p-2 rounded-full cursor-pointer bg-gray-200 hover:bg-gray-300"
+          >
+            <img
+              class="w-6 h-6"
+              src="/images/icons8-messenger-120.png"
+              alt=""
+            />
+          </div>
+
+          <div
+            class="mx-1 relative p-1 rounded-full cursor-pointer bg-gray-200 hover:bg-gray-300"
+          >
+            <img
+              class="w-8 h-8"
+              src="/images/icons8-notification-64.png"
+              alt=""
+            />
+            <p
+              class="absolute bottom-[23px] left-[25px] text-sm px-1 font-semibold bg-red-500 text-white rounded-full"
+            >
+              10
+            </p>
+          </div>
+
+          <div class="relative rounded-full cursor-pointer bg-gray-200">
+            <img
+              class="bg-blue-800 rounded-full w-10 h-10"
+              src="/images/admin-asghar.png"
+              alt=""
+            />
+            <p
+              class="absolute top-[2px] left-[27px] border border-white p-[5px] bg-red-600 rounded-full"
+            ></p>
+            <div
+              class="flex items-center absolute w-4 h-4 top-[27px] left-[27px] px-[1px] border-white border-2 bg-gray-200 rounded-full"
+            >
+              <img class="text-white w-full" src="images/down.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- mid section -->
+    <section class="relative pt-[63px] container mx-auto">
+      <div class="flex justify-between container mx-auto">
+        <!-- left section -->
+        <div class="flex w-[48%] container mx-auto">
+          <div
+            class="fixed px-2 left-0 h-[33rem] hover:overflow-y-scroll w-[320px] bg-gray-100 pt-3 custom-scrollbar"
+          >
+            <!-- 1st peace -->
+            <div class="space-y-1">
+              <div
+                class="flex items-center space-x-3 pl-2 hover:bg-gray-200 py-2 rounded-md cursor-pointer"
+              >
+                <img
+                  class="rounded-full w-7 h-17"
+                  src="/images/admin-asghar.png"
+                  alt=""
+                />
+                <h2 class="text-base text-gray-800 font-medium">Asghar Ali</h2>
+              </div>
+
+              <div
+                class="flex items-center space-x-3 pl-2 hover:bg-gray-200 py-2 rounded-md cursor-pointer"
+              >
+                <img class="w-7 h-7" src="images/friend.png" alt="" />
+                <h2 class="text-base text-gray-800 font-medium">Friends</h2>
+              </div>
+
+              <div
+                class="flex items-center space-x-3 pl-2 hover:bg-gray-200 py-2 rounded-md cursor-pointer"
+              >
+                <img class="w-7 h-7" src="images/feed.png" alt="" />
+
+                <h2 class="text-base text-gray-800 font-medium">Feeds</h2>
+              </div>
+
+              <div
+                class="flex items-center space-x-3 pl-2 hover:bg-gray-200 py-2 rounded-md cursor-pointer"
+              >
+                <img class="w-6 h-6" src="images/Groups.png" alt="" />
+
+                <h2 class="text-base text-gray-800 font-medium">Groups</h2>
+              </div>
+
+              <div
+                class="flex items-center space-x-3 pl-2 hover:bg-gray-200 py-2 rounded-md cursor-pointer"
+              >
+                <img class="w-6 h-6" src="images/video.png" alt="" />
+
+                <h2 class="text-base text-gray-800 font-medium">Videos</h2>
+              </div>
+
+              <div
+                class="flex items-center space-x-3 pl-2 hover:bg-gray-200 py-2 rounded-md cursor-pointer"
+              >
+                <img class="w-6 h-6" src="images/memories.png" alt="" />
+
+                <h2 class="text-base text-gray-800 font-medium">Memories</h2>
+              </div>
+
+              <div
+                class="flex items-center space-x-3 pl-2 hover:bg-gray-200 py-2 rounded-md cursor-pointer"
+              >
+                <img class="w-6 h-6" src="images/Saved.png" alt="" />
+
+                <h2 class="text-base text-gray-800 font-medium">Saved</h2>
+              </div>
+
+              <div
+                class="flex items-center space-x-3 pl-2 hover:bg-gray-200 py-2 rounded-md cursor-pointer"
+              >
+                <img class="w-6 h-6" src="images/dashboard.png" alt="" />
+
+                <h2 class="text-base text-gray-800 font-medium">
+                  Professional Dashboard
+                </h2>
+              </div>
+
+              <div
+                class="flex items-center space-x-2 pl-2 hover:bg-gray-200 py-2 rounded-md cursor-pointer"
+              >
+                <p
+                  class="text-base rotate-90 text-gray-800 bg-gray-200 rounded-full font-[900] py-[2px] px-2"
+                >
+                  >
+                </p>
+                <h2 class="text-base text-gray-800 font-medium">See More</h2>
+              </div>
+
+              <!-- line -->
+              <p class="border-b-[1px] border-gray-300"></p>
+            </div>
+
+            <!-- 2nd peace -->
+            <div>
+              <h2 class="text-lg pl-2 text-gray-600 font-medium py-2">
+                You Shortcuts
+              </h2>
+
+              <div
+                class="flex items-center space-x-3 pl-2 hover:bg-gray-200 py-2 rounded-md cursor-pointer"
+              >
+                <img
+                  class="rounded-full w-7 h-7"
+                  src="/images/blog3.jpg"
+                  alt=""
+                />
+                <h2 class="text-[15px] text-gray-800 font-semibold">
+                  Web Developer's Job
+                </h2>
+              </div>
+
+              <div
+                class="flex items-center space-x-3 pl-2 hover:bg-gray-200 py-2 rounded-md cursor-pointer"
+              >
+                <img
+                  class="bg-blue-800 rounded-full w-7 h-7"
+                  src="/images/icon-facebook.svg"
+                  alt=""
+                />
+                <h2 class="text-[15px] text-gray-800 font-semibold">
+                  Facebook Pages
+                </h2>
+              </div>
+
+              <div
+                class="flex items-center space-x-3 pl-2 hover:bg-gray-200 py-2 rounded-md cursor-pointer"
+              >
+                <img
+                  class="rounded-full w-7 h-7"
+                  src="/images/admin-asghar.png"
+                  alt=""
+                />
+                <h2 class="text-[15px] text-gray-800 font-semibold">
+                  Code with Ali
+                </h2>
+              </div>
+
+              <div
+                class="flex items-center space-x-3 pl-2 hover:bg-gray-200 py-2 rounded-md cursor-pointer"
+              >
+                <img
+                  class="bg-red-800 rounded-full w-7 h-7"
+                  src="/images/icon-youtube.svg"
+                  alt=""
+                />
+                <h2 class="text-[15px] text-gray-800 font-semibold">
+                  Youtube Popular Vlogs
+                </h2>
+              </div>
+
+              <div
+                class="flex items-center space-x-2 pl-2 hover:bg-gray-200 py-2 rounded-md cursor-pointer"
+              >
+                <p
+                  class="text-base rotate-90 text-gray-800 bg-gray-200 rounded-full font-[900] py-[2px] px-2"
+                >
+                  >
+                </p>
+                <h2 class="text-[14px] text-black font-semibold">See More</h2>
+              </div>
+            </div>
+
+            <!-- 3rd peace -->
+            <div class="py-2 pl-2">
+              <div class="flex items-center space-x-2">
+                <h2
+                  class="text-xs font-medium cursor-pointer text-gray-500 hover:text-gray-600"
+                >
+                  Privacy .
+                </h2>
+
+                <h2
+                  class="text-xs font-medium cursor-pointer text-gray-500 hover:text-gray-600"
+                >
+                  Terms .
+                </h2>
+
+                <h2
+                  class="text-xs font-medium cursor-pointer text-gray-500 hover:text-gray-600"
+                >
+                  Adversiting .
+                </h2>
+              </div>
+
+              <div class="flex items-center space-x-2">
+                <h2
+                  class="text-xs font-medium cursor-pointer text-gray-500 hover:text-gray-600"
+                >
+                  Ads Choices .
+                </h2>
+
+                <h2
+                  class="text-xs font-medium cursor-pointer text-gray-500 hover:text-gray-600"
+                >
+                  Cookies .
+                </h2>
+                <h2
+                  class="text-xs font-medium cursor-pointer text-gray-500 hover:text-gray-600"
+                >
+                  More .
+                </h2>
+                <h2
+                  class="text-xs font-medium cursor-pointer text-gray-500 hover:text-gray-600"
+                >
+                  Meta
+                </h2>
+                <h2
+                  class="text-xs font-medium cursor-pointer text-gray-500 hover:text-gray-600"
+                >
+                  2024
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- mid section scroll section -->
+        <div class="bg-gray-100 h-screen w-[85%] container mx-auto">
+          <!-- upper stories section -->
+          <div class="w-full flex items-center justify-center space-x-2 py-5">
+            <div class="relative rounded-xl bg-white shadow-md pt-[3px] p-0">
+              <div class="w-40 h-52">
+                <img
+                  class="cursor-pointer w-full h-full rounded-t-md"
+                  src="/images/Ali-programmer.jpg"
+                  alt=""
+                />
+              </div>
+              <div
+                class="cursor-pointer flex justify-center absolute top-48 right-[66px]"
+              >
+                <p
+                  class="text-2xl text-gray-50 bg-blue-500 rounded-full font-medium px-2 border-4 border-white"
+                >
+                  +
+                </p>
+              </div>
+              <h2
+                class="py-2 pt-5 text-base font-semibold text-black text-center"
+              >
+                Create story
+              </h2>
+            </div>
+
+            <div
+              style="background-image: url(/images/blog3.jpg)"
+              class="bg-cover bg-no-repeat flex-col justify-between px-1 bg-center cursor-pointer pt-2 space-y-40 rounded-xl w-[23%] shadow-xl"
+            >
+              <div
+                class="w-10 h-10 flex justify-center rounded-full border-4 border-blue-600"
+              >
+                <img class="rounded-full" src="images/rezize.jpg" alt="" />
+              </div>
+
+              <h2
+                class="py-2 pt-5 text-sm font-semibold text-white text-center"
+              >
+                Steve Hawkenson
+              </h2>
+            </div>
+
+            <div
+              style="background-image: url(/images/blog1.jpg)"
+              class="bg-cover bg-no-repeat flex-col justify-between px-1 bg-center cursor-pointer pt-2 space-y-40 rounded-xl w-[23%] shadow-xl"
+            >
+              <div
+                class="w-10 h-10 flex justify-center rounded-full border-4 border-blue-600"
+              >
+                <img
+                  class="rounded-full"
+                  src="images/team-member-1-300x300.jpg"
+                  alt=""
+                />
+              </div>
+
+              <h2 class="py-2 pt-5 text-sm font-semibold text-white px-2">
+                Urooj Fatima
+              </h2>
+            </div>
+
+            <div
+              style="background-image: url(/images/144.jpg)"
+              class="bg-cover bg-no-repeat flex-col justify-between px-1 bg-center cursor-pointer pt-2 space-y-40 rounded-xl w-[23%] shadow-xl"
+            >
+              <div
+                class="w-10 h-10 flex justify-center rounded-full border-4 border-blue-600"
+              >
+                <img
+                  class="rounded-full"
+                  src="images/team-member-2-300x300.jpg"
+                  alt=""
+                />
+              </div>
+
+              <h2
+                class="py-2 pt-5 text-sm font-semibold text-white text-center"
+              >
+                Evans Richardson
+              </h2>
+            </div>
+          </div>
+
+          <!-- last&mid section -->
+          <div class="lg:mx-10 mx-5">
+            <!-- upper section -->
+            <div class="bg-white shadow pt-4 px-4 mb-6 rounded-lg">
+              <div class="grid grid-cols-[8%_auto] space-x-2 pb-4">
+                <img
+                  class="w-10 h-10 rounded-full"
+                  src="images/admin-asghar.png"
+                  alt=""
+                />
+                <input
+                  class="rounded-full py-1 bg-gray-100 text-gray-700 placeholder:text-gray-600 px-4 text-lg outline-none"
+                  placeholder="What's on your mind, Asghar?"
+                  type="text"
+                />
+              </div>
+              <p class="border-b-[1px] border-gray-300"></p>
+              <div class="flex items-center justify-center py-1">
+                <div
+                  class="flex items-center justify-center space-x-2 hover:bg-gray-100 cursor-pointer px-7 py-2 rounded-lg"
+                >
+                  <img class="w-7 h-7" src="images/video-stream.png" alt="" />
+                  <h2 class="text-base text-gray-600 font-medium">
+                    Live video
+                  </h2>
+                </div>
+                <div
+                  class="flex items-center justify-center space-x-2 hover:bg-gray-100 cursor-pointer px-7 py-2 rounded-lg"
+                >
+                  <img class="w-7 h-7" src="images/photos.png" alt="" />
+                  <h2 class="text-base text-gray-600 font-medium">
+                    Photo/video
+                  </h2>
+                </div>
+                <div
+                  class="flex items-center justify-center space-x-2 hover:bg-gray-100 cursor-pointer px-7 py-2 rounded-lg"
+                >
+                  <img class="w-7 h-7" src="images/reel.png" alt="" />
+                  <h2 class="text-base text-gray-600 font-medium">Reel</h2>
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-4 mb-4">
+              <!-- 4th post -->
+              <div class="bg-white shadow-lg rounded-lg">
+                <!-- post&text -->
+                <div class="flex justify-between px-4 pb-1 pt-1">
+                  <div
+                    class="relative flex items-center space-x-2 cursor-pointer"
+                  >
+                    <img
+                      class="rounded-full w-[41px] h-[41px]"
+                      src="/images/fahid.jpg"
+                      alt=""
+                    />
+                    <p
+                      class="absolute bottom-[6px] left-[22px] border-2 border-white p-[4px] bg-green-500 rounded-full"
+                    ></p>
+                    <figure class="space-y-0">
+                      <h2
+                        class="flex items-center space-x-3 text-[16px] pb-0 text-gray-700 font-medium tracking-normal"
+                      >
+                        Fahad Mustafa
+                        <span class="flex"
+                          ><img
+                            class="w-5 h-5 ml-1"
+                            src="images/blue.png"
+                            alt=""
+                        /></span>
+                      </h2>
+                      <div class="flex items-center space-x-1">
+                        <p class="text-[12px] pt-0 font-semibold text-gray-400">
+                          1d
+                        </p>
+                        <span class="xuxw1ft"
+                          ><span
+                            class="x4k7w5x x1h91t0o x1h9r5lt x1jfb8zj xv2umb2 x1beo9mf xaigb6o x12ejxvf x3igimt xarpa2k xedcshv x1lytzrv x1t2pt76 x7ja8zs x1qrby5j"
+                            ><span class="x1rg5ohu x1n2onr6 xs7f9wi"
+                              ><svg
+                                viewBox="0 0 16 16"
+                                width="12"
+                                height="12"
+                                fill="currentColor"
+                                title="Shared with Public"
+                                class="x19dipnz x1lliihq x1k90msu x2h7rmj x1qfuztq"
+                                style="--color: var(--secondary-icon)"
+                              >
+                                <title>Shared with Public</title>
+                                <g
+                                  fill-rule="evenodd"
+                                  transform="translate(-448 -544)"
+                                >
+                                  <g>
+                                    <path
+                                      d="M109.5 408.5c0 3.23-2.04 5.983-4.903 7.036l.07-.036c1.167-1 1.814-2.967 2-3.834.214-1 .303-1.3-.5-1.96-.31-.253-.677-.196-1.04-.476-.246-.19-.356-.59-.606-.73-.594-.337-1.107.11-1.954.223a2.666 2.666 0 0 1-1.15-.123c-.007 0-.007 0-.013-.004l-.083-.03c-.164-.082-.077-.206.006-.36h-.006c.086-.17.086-.376-.05-.529-.19-.214-.54-.214-.804-.224-.106-.003-.21 0-.313.004l-.003-.004c-.04 0-.084.004-.124.004h-.037c-.323.007-.666-.034-.893-.314-.263-.353-.29-.733.097-1.09.28-.26.863-.8 1.807-.22.603.37 1.166.667 1.666.5.33-.11.48-.303.094-.87a1.128 1.128 0 0 1-.214-.73c.067-.776.687-.84 1.164-1.2.466-.356.68-.943.546-1.457-.106-.413-.51-.873-1.28-1.01a7.49 7.49 0 0 1 6.524 7.434"
+                                      transform="translate(354 143.5)"
+                                    ></path>
+                                    <path
+                                      d="M104.107 415.696A7.498 7.498 0 0 1 94.5 408.5a7.48 7.48 0 0 1 3.407-6.283 5.474 5.474 0 0 0-1.653 2.334c-.753 2.217-.217 4.075 2.29 4.075.833 0 1.4.561 1.333 2.375-.013.403.52 1.78 2.45 1.89.7.04 1.184 1.053 1.33 1.74.06.29.127.65.257.97a.174.174 0 0 0 .193.096"
+                                      transform="translate(354 143.5)"
+                                    ></path>
+                                    <path
+                                      fill-rule="nonzero"
+                                      d="M110 408.5a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-1 0a7 7 0 1 0-14 0 7 7 0 0 0 14 0z"
+                                      transform="translate(354 143.5)"
+                                    ></path>
+                                  </g>
+                                </g></svg></span></span
+                          ><!--$--><!--/$--></span
+                        >
+                      </div>
+                    </figure>
+                  </div>
+                  <!-- xcross option -->
+                  <div class="flex items-center space-x-3">
+                    <h2
+                      class="text-2xl pb-5 text-gray-500 font-bold cursor-pointer"
+                    >
+                      ...
+                    </h2>
+                    <div>
+                      <a
+                        aria-label="hide post"
+                        class="x1i10hfl x1ejq31n xd10rxx x1sy0etr x17r0tee x1ypdohk xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r x16tdsg8 x1hl2dhg xggy1nq x87ps6o x1lku1pv x1a2a7pz x6s0dn4 x14yjl9h xudhj91 x18nykt9 xww2gxu x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x78zum5 xl56j7k xexx8yu x4uap5 x18d9i69 xkhd6sd x1n2onr6 xc9qbxq x14qfxbe xjbqb8w"
+                        href="#"
+                        role="link"
+                        tabindex="0"
+                        class=""
+                        ><i
+                          data-visualcompletion="css-img"
+                          class="x1b0d499 x1d69dk1"
+                          style="
+                            background-position: 0 -473px;
+                            background-size: auto;
+                            width: 20px;
+                            height: 20px;
+                            background-repeat: no-repeat;
+                            display: inline-block;
+                          "
+                        ></i>
+                        <div
+                          class="text-gray-500 x1ey2m1c xds687c x17qophe xg01cxk x47corl x10l6tqk x13vifvy x1ebt8du x19991ni x1dhq9h xzolkzo x12go9s9 x1rnf11y xprq8jg"
+                          role="none"
+                          data-visualcompletion="ignore"
+                        ></div
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- post text -->
+                <div dir="auto" style="text-align: start" class="px-2 pb-2">
+                  Hello, I'm Fahid Mustafa. I'll soon introduce you to someone
+                  whose dance will amaze you all. He's really talented. His name
+                  is Mudsir Talpure, who became famous for his dancing skills.
+                  He's the one who will join our "Jeeto Pakistan" show soon.
+
+                  <span
+                    ><a
+                      class="text-blue-600 x1i10hfl xjbqb8w x1ejq31n xd10rxx x1sy0etr x17r0tee x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x1ypdohk xt0psk2 xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 x1hl2dhg xggy1nq x1a2a7pz xt0b8zv x1fey0fg"
+                      href="https://buff.ly/4afgix7?fbclid=IwAR1Qsn8asqmfmB2sSkVULSx2r5Zryos26BeXDTV5TeQzjle4_QLpcO1IKaY"
+                      rel="nofollow noreferrer"
+                      role="link"
+                      tabindex="0"
+                      target="_blank"
+                      >jeeto pakistan.com</a
+                    ></span
+                  >
+                </div>
+
+                <!-- image -->
+                <div class="border border-l-0 border-r-0 border-gray-300">
+                  <img class="" src="/images/mudu.jpg" alt="" />
+                </div>
+                <!-- images bottom -->
+                <div>
+                  <!-- react -->
+                  <div class="px-4 py-2 flex items-center justify-between">
+                    <div class="flex items-center space-x-0 bg-white">
+                      <img
+                        class="w-5 h-5 -mr-[1px] bg-white"
+                        src="/images/like.jpg"
+                        alt=""
+                      />
+                      <img
+                        class="w-5 h-5 bg-white"
+                        src="/images/heart.png"
+                        alt=""
+                      />
+                      <h2 class="pl-1 text-base font-normal text-[#898A8D]">
+                        90k
+                      </h2>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                      <div class="flex items-center">
+                        <h2 class="mr-1 text-base font-normal text-[#898A8D]">
+                          40k
+                        </h2>
+                        <img class="w-5 h-5" src="/images/comment.png" alt="" />
+                      </div>
+                      <div class="flex items-center">
+                        <h2 class="mr-1 text-base font-normal text-[#898A8D]">
+                          42k
+                        </h2>
+                        <img class="w-5 h-5" src="/images/share.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <!-- border -->
+                  <p class="border-b border-gray-200 mx-4"></p>
+                  <!-- like and commands -->
+                  <div
+                    class="px-4 py-2 flex items-center justify-center space-x-20"
+                  >
+                    <div class="flex items-center space-x-1">
+                      <img
+                        class="w-5 h-5 -mr-2"
+                        src="/images/icons8-like-96.png"
+                        alt=""
+                      />
+
+                      <h2 class="pl-2 text-base font-medium text-[#898A8D]">
+                        Like
+                      </h2>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                      <img
+                        class="w-5 h-5 -mr-2"
+                        src="/images/comment1.png"
+                        alt=""
+                      />
+
+                      <h2 class="pl-2 text-base font-medium text-[#898A8D]">
+                        Comment
+                      </h2>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                      <img
+                        class="w-5 h-5 -mr-2"
+                        src="/images/share1.png"
+                        alt=""
+                      />
+
+                      <h2 class="pl-2 text-base font-medium text-[#898A8D]">
+                        Share
+                      </h2>
+                    </div>
+                  </div>
+                  <!-- border -->
+                  <p class="border-b border-gray-200 mx-3"></p>
+                </div>
+              </div>
+              <!-- 1st post -->
+              <div class="bg-white shadow-lg rounded-lg">
+                <!-- post&text -->
+                <div class="flex justify-between px-4 pb-1 pt-1">
+                  <div
+                    class="relative flex items-center space-x-2 cursor-pointer"
+                  >
+                    <img
+                      class="rounded-full w-[41px] h-[41px]"
+                      src="/images/admin-asghar.png"
+                      alt=""
+                    />
+                    <p
+                      class="absolute bottom-[6px] left-[22px] border-2 border-white p-[4px] bg-green-500 rounded-full"
+                    ></p>
+                    <figure class="space-y-0">
+                      <h2
+                        class="text-[16px] pb-0 text-gray-700 font-medium tracking-normal"
+                      >
+                        Asghar Ali
+                        <span class="text-gray-500 text-base font-normal"
+                          >is in</span
+                        >
+                        Sehwan, Sindh, Pakistan
+                      </h2>
+                      <div class="flex items-center space-x-1">
+                        <p class="text-[11px] pt-0 font-semibold text-gray-400">
+                          1 day ago .
+                        </p>
+                        <span class="xuxw1ft"
+                          ><span
+                            class="x4k7w5x x1h91t0o x1h9r5lt x1jfb8zj xv2umb2 x1beo9mf xaigb6o x12ejxvf x3igimt xarpa2k xedcshv x1lytzrv x1t2pt76 x7ja8zs x1qrby5j"
+                            ><span class="x1rg5ohu x1n2onr6 xs7f9wi"
+                              ><svg
+                                viewBox="0 0 16 16"
+                                width="12"
+                                height="12"
+                                fill="currentColor"
+                                title="Shared with Public"
+                                class="x19dipnz x1lliihq x1k90msu x2h7rmj x1qfuztq"
+                                style="--color: var(--secondary-icon)"
+                              >
+                                <title>Shared with Public</title>
+                                <g
+                                  fill-rule="evenodd"
+                                  transform="translate(-448 -544)"
+                                >
+                                  <g>
+                                    <path
+                                      d="M109.5 408.5c0 3.23-2.04 5.983-4.903 7.036l.07-.036c1.167-1 1.814-2.967 2-3.834.214-1 .303-1.3-.5-1.96-.31-.253-.677-.196-1.04-.476-.246-.19-.356-.59-.606-.73-.594-.337-1.107.11-1.954.223a2.666 2.666 0 0 1-1.15-.123c-.007 0-.007 0-.013-.004l-.083-.03c-.164-.082-.077-.206.006-.36h-.006c.086-.17.086-.376-.05-.529-.19-.214-.54-.214-.804-.224-.106-.003-.21 0-.313.004l-.003-.004c-.04 0-.084.004-.124.004h-.037c-.323.007-.666-.034-.893-.314-.263-.353-.29-.733.097-1.09.28-.26.863-.8 1.807-.22.603.37 1.166.667 1.666.5.33-.11.48-.303.094-.87a1.128 1.128 0 0 1-.214-.73c.067-.776.687-.84 1.164-1.2.466-.356.68-.943.546-1.457-.106-.413-.51-.873-1.28-1.01a7.49 7.49 0 0 1 6.524 7.434"
+                                      transform="translate(354 143.5)"
+                                    ></path>
+                                    <path
+                                      d="M104.107 415.696A7.498 7.498 0 0 1 94.5 408.5a7.48 7.48 0 0 1 3.407-6.283 5.474 5.474 0 0 0-1.653 2.334c-.753 2.217-.217 4.075 2.29 4.075.833 0 1.4.561 1.333 2.375-.013.403.52 1.78 2.45 1.89.7.04 1.184 1.053 1.33 1.74.06.29.127.65.257.97a.174.174 0 0 0 .193.096"
+                                      transform="translate(354 143.5)"
+                                    ></path>
+                                    <path
+                                      fill-rule="nonzero"
+                                      d="M110 408.5a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-1 0a7 7 0 1 0-14 0 7 7 0 0 0 14 0z"
+                                      transform="translate(354 143.5)"
+                                    ></path>
+                                  </g>
+                                </g></svg></span></span
+                          ><!--$--><!--/$--></span
+                        >
+                      </div>
+                    </figure>
+                  </div>
+                  <!-- xcross option -->
+                  <div class="flex items-center space-x-3">
+                    <h2
+                      class="text-2xl pb-5 text-gray-500 font-bold cursor-pointer"
+                    >
+                      ...
+                    </h2>
+                    <div>
+                      <a
+                        aria-label="hide post"
+                        class="x1i10hfl x1ejq31n xd10rxx x1sy0etr x17r0tee x1ypdohk xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r x16tdsg8 x1hl2dhg xggy1nq x87ps6o x1lku1pv x1a2a7pz x6s0dn4 x14yjl9h xudhj91 x18nykt9 xww2gxu x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x78zum5 xl56j7k xexx8yu x4uap5 x18d9i69 xkhd6sd x1n2onr6 xc9qbxq x14qfxbe xjbqb8w"
+                        href="#"
+                        role="link"
+                        tabindex="0"
+                        class=""
+                        ><i
+                          data-visualcompletion="css-img"
+                          class="x1b0d499 x1d69dk1"
+                          style="
+                            background-position: 0 -473px;
+                            background-size: auto;
+                            width: 20px;
+                            height: 20px;
+                            background-repeat: no-repeat;
+                            display: inline-block;
+                          "
+                        ></i>
+                        <div
+                          class="text-gray-500 x1ey2m1c xds687c x17qophe xg01cxk x47corl x10l6tqk x13vifvy x1ebt8du x19991ni x1dhq9h xzolkzo x12go9s9 x1rnf11y xprq8jg"
+                          role="none"
+                          data-visualcompletion="ignore"
+                        ></div
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- post text -->
+                <div dir="auto" style="text-align: start" class="px-2 pb-2">
+                  Hello Aslam Ul Ekam!Here is Asghar Ali,from Sehwan Sharif,
+                  Jamshoro, Sindh. I specialize in web design using WordPress,
+                  CSS, and Tailwind CSS. With over two years of experience, I've
+                  mastered these platforms, especially WordPress. I can create
+                  various types of websites, including e-commerce, business,
+                  school management, and landing pages, all optimized for SEO. I
+                  am eager to contribute my skills and creativity to any
+                  institute. Give me a chance, and I'll prove myself as a
+                  top-notch designer!
+                  <span
+                    ><a
+                      class="text-blue-600 x1i10hfl xjbqb8w x1ejq31n xd10rxx x1sy0etr x17r0tee x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x1ypdohk xt0psk2 xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 x1hl2dhg xggy1nq x1a2a7pz xt0b8zv x1fey0fg"
+                      href="https://buff.ly/4afgix7?fbclid=IwAR1Qsn8asqmfmB2sSkVULSx2r5Zryos26BeXDTV5TeQzjle4_QLpcO1IKaY"
+                      rel="nofollow noreferrer"
+                      role="link"
+                      tabindex="0"
+                      target="_blank"
+                      >https://buff.ly/4afgix7</a
+                    ></span
+                  >
+                </div>
+
+                <!-- image -->
+                <div class="border-2 border-l-0 border-r-0 border-gray-400">
+                  <img
+                    class="h-[31rem] w-full"
+                    src="/images/Asghar Ali (3).png"
+                    alt=""
+                  />
+                </div>
+                <!-- images bottom -->
+                <div>
+                  <!-- react -->
+                  <div class="px-4 py-2 flex items-center justify-between">
+                    <div class="flex items-center space-x-0 bg-white">
+                      <img
+                        class="w-5 h-5 -mr-[1px] bg-white"
+                        src="/images/like.jpg"
+                        alt=""
+                      />
+                      <img
+                        class="w-5 h-5 bg-white"
+                        src="/images/heart.png"
+                        alt=""
+                      />
+                      <h2
+                        id="likeCount"
+                        class="like-count pl-1 text-base font-normal text-[#898A8D]"
+                      >
+                        Sonu and 50 others
+                      </h2>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                      <div class="flex items-center">
+                        <h2 class="mr-1 text-base font-normal text-[#898A8D]">
+                          40
+                        </h2>
+                        <img class="w-5 h-5" src="/images/comment.png" alt="" />
+                      </div>
+                      <div class="flex items-center">
+                        <h2 class="mr-1 text-base font-normal text-[#898A8D]">
+                          5
+                        </h2>
+                        <img class="w-5 h-5" src="/images/share.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <!-- border -->
+                  <p class="border-b border-gray-200 mx-4"></p>
+                  <!-- like and commands -->
+                  <div
+                    class="px-4 py-2 flex items-center justify-center space-x-20"
+                  >
+                    <div
+                      class="flex items-center space-x-1 like-button"
+                      id="likeButton"
+                    >
+                      <img
+                        id="likeIcon"
+                        class="like-icon w-5 h-5 -mr-2"
+                        src="/images/icons8-like-96.png"
+                        alt=""
+                      />
+                      <h2 class="pl-2 text-base font-medium text-[#898A8D]">
+                        Like
+                      </h2>
+                    </div>
+
+                    <div class="flex items-center space-x-1">
+                      <img
+                        class="w-5 h-5 -mr-2"
+                        src="/images/comment1.png"
+                        alt=""
+                      />
+                      <h2 class="pl-2 text-base font-medium text-[#898A8D]">
+                        Comment
+                      </h2>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                      <img
+                        class="w-5 h-5 -mr-2"
+                        src="/images/share1.png"
+                        alt=""
+                      />
+                      <h2 class="pl-2 text-base font-medium text-[#898A8D]">
+                        Share
+                      </h2>
+                    </div>
+                  </div>
+
+                  <!-- border -->
+                  <p class="border-b border-gray-200 mx-3"></p>
+                  <div></div>
+                </div>
+
+                <!-- veiw comments -->
+                <div class="px-5 py-2">
+                  <h2 class="text-[16px] pb-2 font-semibold text-gray-400">
+                    Veiw more comments.
+                  </h2>
+                  <div>
+                    <div class="flex space-x-2">
+                      <img
+                        class="w-9 h-9 rounded-full"
+                        src="images/Ali-programmer.jpg"
+                        alt=""
+                      />
+                      <div>
+                        <div class="p-1 bg-[#f0f2f5] px-2 rounded-xl">
+                          <h2
+                            class="text-[14px] pb-0 text-gray-900 font-medium tracking-normal"
+                          >
+                            Ali programmar
+                          </h2>
+                          <h2
+                            class="text-[15px] pt-0 font-normal text-gray-800"
+                          >
+                            Awesome❤️
+                          </h2>
+                        </div>
+                        <div class="flex items-center space-x-5 justify-center">
+                          <p
+                            class="text-[12px] pt-0 font-semibold text-gray-500"
+                          >
+                            14h
+                          </p>
+                          <p class="text-[12px] pt-0 font-bold text-gray-600">
+                            Like
+                          </p>
+                          <p class="text-[12px] pt-0 font-bold text-gray-600">
+                            Rply
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- give commmit -->
+                <div class="px-5 flex items-center space-x-2 py-2">
+                  <div class="relative rounded-full cursor-pointer bg-gray-200">
+                    <img
+                      class="bg-blue-800 rounded-full w-[42px] h-9"
+                      src="/images/admin-asghar.png"
+                      alt=""
+                    />
+
+                    <div
+                      class="flex items-center absolute w-4 h-4 top-[26px] left-[25px] px-[1px] border-white border-2 bg-gray-200 rounded-full"
+                    >
+                      <img
+                        class="text-white w-full"
+                        src="images/down.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <input
+                    class="bg-[#f0f2f5] text-[15x] placeholder:text-gray-500 rounded-full w-full h-9 px-3 focus:outline-none"
+                    type="text"
+                    placeholder="write a comment..."
+                  />
+                </div>
+              </div>
+
+              <!-- 2nd post -->
+              <div class="bg-white shadow-lg rounded-lg">
+                <!-- post&text -->
+                <div class="flex justify-between px-4 pb-1 pt-1">
+                  <div
+                    class="relative flex items-center space-x-2 cursor-pointer"
+                  >
+                    <img
+                      class="rounded-full w-[41px] h-[41px]"
+                      src="/images/team-member-1-300x300.jpg"
+                      alt=""
+                    />
+
+                    <figure class="space-y-0">
+                      <h2
+                        class="text-[16px] pb-0 text-gray-700 font-medium tracking-normal"
+                      >
+                        Qurtlain Baloch
+                      </h2>
+                      <div class="flex items-center space-x-1">
+                        <p class="text-[12px] pt-0 font-semibold text-gray-400">
+                          4h .
+                        </p>
+                        <span class="xuxw1ft"
+                          ><span
+                            class="x4k7w5x x1h91t0o x1h9r5lt x1jfb8zj xv2umb2 x1beo9mf xaigb6o x12ejxvf x3igimt xarpa2k xedcshv x1lytzrv x1t2pt76 x7ja8zs x1qrby5j"
+                            ><span class="x1rg5ohu x1n2onr6 xs7f9wi"
+                              ><svg
+                                viewBox="0 0 16 16"
+                                width="12"
+                                height="12"
+                                fill="currentColor"
+                                title="Shared with Public"
+                                class="x19dipnz x1lliihq x1k90msu x2h7rmj x1qfuztq"
+                                style="--color: var(--secondary-icon)"
+                              >
+                                <title>Shared with Public</title>
+                                <g
+                                  fill-rule="evenodd"
+                                  transform="translate(-448 -544)"
+                                >
+                                  <g>
+                                    <path
+                                      d="M109.5 408.5c0 3.23-2.04 5.983-4.903 7.036l.07-.036c1.167-1 1.814-2.967 2-3.834.214-1 .303-1.3-.5-1.96-.31-.253-.677-.196-1.04-.476-.246-.19-.356-.59-.606-.73-.594-.337-1.107.11-1.954.223a2.666 2.666 0 0 1-1.15-.123c-.007 0-.007 0-.013-.004l-.083-.03c-.164-.082-.077-.206.006-.36h-.006c.086-.17.086-.376-.05-.529-.19-.214-.54-.214-.804-.224-.106-.003-.21 0-.313.004l-.003-.004c-.04 0-.084.004-.124.004h-.037c-.323.007-.666-.034-.893-.314-.263-.353-.29-.733.097-1.09.28-.26.863-.8 1.807-.22.603.37 1.166.667 1.666.5.33-.11.48-.303.094-.87a1.128 1.128 0 0 1-.214-.73c.067-.776.687-.84 1.164-1.2.466-.356.68-.943.546-1.457-.106-.413-.51-.873-1.28-1.01a7.49 7.49 0 0 1 6.524 7.434"
+                                      transform="translate(354 143.5)"
+                                    ></path>
+                                    <path
+                                      d="M104.107 415.696A7.498 7.498 0 0 1 94.5 408.5a7.48 7.48 0 0 1 3.407-6.283 5.474 5.474 0 0 0-1.653 2.334c-.753 2.217-.217 4.075 2.29 4.075.833 0 1.4.561 1.333 2.375-.013.403.52 1.78 2.45 1.89.7.04 1.184 1.053 1.33 1.74.06.29.127.65.257.97a.174.174 0 0 0 .193.096"
+                                      transform="translate(354 143.5)"
+                                    ></path>
+                                    <path
+                                      fill-rule="nonzero"
+                                      d="M110 408.5a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-1 0a7 7 0 1 0-14 0 7 7 0 0 0 14 0z"
+                                      transform="translate(354 143.5)"
+                                    ></path>
+                                  </g>
+                                </g></svg></span></span
+                          ><!--$--><!--/$--></span
+                        >
+                      </div>
+                    </figure>
+                  </div>
+                  <!-- xcross option -->
+                  <div class="flex items-center space-x-3">
+                    <h2
+                      class="text-2xl pb-5 text-gray-500 font-bold cursor-pointer"
+                    >
+                      ...
+                    </h2>
+                    <div>
+                      <a
+                        aria-label="hide post"
+                        class="x1i10hfl x1ejq31n xd10rxx x1sy0etr x17r0tee x1ypdohk xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r x16tdsg8 x1hl2dhg xggy1nq x87ps6o x1lku1pv x1a2a7pz x6s0dn4 x14yjl9h xudhj91 x18nykt9 xww2gxu x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x78zum5 xl56j7k xexx8yu x4uap5 x18d9i69 xkhd6sd x1n2onr6 xc9qbxq x14qfxbe xjbqb8w"
+                        href="#"
+                        role="link"
+                        tabindex="0"
+                        class=""
+                        ><i
+                          data-visualcompletion="css-img"
+                          class="x1b0d499 x1d69dk1"
+                          style="
+                            background-position: 0 -473px;
+                            background-size: auto;
+                            width: 20px;
+                            height: 20px;
+                            background-repeat: no-repeat;
+                            display: inline-block;
+                          "
+                        ></i>
+                        <div
+                          class="text-gray-500 x1ey2m1c xds687c x17qophe xg01cxk x47corl x10l6tqk x13vifvy x1ebt8du x19991ni x1dhq9h xzolkzo x12go9s9 x1rnf11y xprq8jg"
+                          role="none"
+                          data-visualcompletion="ignore"
+                        ></div
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- post text -->
+                <div dir="auto" style="text-align: start" class="px-2 pb-2">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. A
+                  veniam non fuga libero reprehenderit nam aliquid, porro
+                  quisquam voluptates cum?
+                </div>
+
+                <!-- image -->
+                <div class="border border-l-0 border-r-0 border-gray-300">
+                  <img
+                    class="h-[27rem] w-full"
+                    src="/images/blog3.jpg"
+                    alt=""
+                  />
+                </div>
+                <!-- images bottom -->
+                <div>
+                  <!-- react -->
+                  <div class="px-4 py-2 flex items-center justify-between">
+                    <div class="flex items-center space-x-0 bg-white">
+                      <img
+                        class="w-5 h-5 -mr-[1px] bg-white"
+                        src="/images/like.jpg"
+                        alt=""
+                      />
+                      <img
+                        class="w-5 h-5 bg-white"
+                        src="/images/heart.png"
+                        alt=""
+                      />
+                      <h2 class="pl-1 text-base font-normal text-[#898A8D]">
+                        33k
+                      </h2>
+                    </div>
+                    <div class="flex items-center">
+                      <h2 class="mr-2 text-base font-normal text-[#898A8D]">
+                        1.2k
+                      </h2>
+                      <img class="w-5 h-5" src="/images/share.png" alt="" />
+                    </div>
+                  </div>
+                  <!-- border -->
+                  <p class="border-b border-gray-200 mx-4"></p>
+                  <!-- like and commands -->
+                  <div
+                    class="px-4 py-2 flex items-center justify-center space-x-20"
+                  >
+                    <div class="flex items-center space-x-1">
+                      <img
+                        class="w-5 h-5 -mr-2"
+                        src="/images/icons8-like-96.png"
+                        alt=""
+                      />
+
+                      <h2 class="pl-2 text-base font-medium text-[#898A8D]">
+                        Like
+                      </h2>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                      <img
+                        class="w-5 h-5 -mr-2"
+                        src="/images/comment1.png"
+                        alt=""
+                      />
+
+                      <h2 class="pl-2 text-base font-medium text-[#898A8D]">
+                        Comment
+                      </h2>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                      <img
+                        class="w-5 h-5 -mr-2"
+                        src="/images/share1.png"
+                        alt=""
+                      />
+
+                      <h2 class="pl-2 text-base font-medium text-[#898A8D]">
+                        Share
+                      </h2>
+                    </div>
+                  </div>
+                  <!-- border -->
+                  <p class="border-b border-gray-200 mx-3"></p>
+                  <div></div>
+                </div>
+              </div>
+
+              <!-- 3rd post -->
+              <div class="bg-white shadow-lg rounded-lg">
+                <!-- post&text -->
+                <div class="flex justify-between px-4 pb-1 pt-1">
+                  <div
+                    class="relative flex items-center space-x-2 cursor-pointer"
+                  >
+                    <img
+                      class="rounded-full w-[41px] h-[41px]"
+                      src="/images/team-member-4-300x300.jpg"
+                      alt=""
+                    />
+                    <p
+                      class="absolute bottom-[6px] left-[22px] border-2 border-white p-[4px] bg-green-500 rounded-full"
+                    ></p>
+                    <figure class="space-y-0">
+                      <h2
+                        class="text-[16px] pb-0 text-gray-700 font-medium tracking-normal"
+                      >
+                        Zainab Abbasi
+                      </h2>
+                      <div class="flex items-center space-x-1">
+                        <p class="text-[12px] pt-0 font-semibold text-gray-400">
+                          4h .
+                        </p>
+                        <span class="xuxw1ft"
+                          ><span
+                            class="x4k7w5x x1h91t0o x1h9r5lt x1jfb8zj xv2umb2 x1beo9mf xaigb6o x12ejxvf x3igimt xarpa2k xedcshv x1lytzrv x1t2pt76 x7ja8zs x1qrby5j"
+                            ><span class="x1rg5ohu x1n2onr6 xs7f9wi"
+                              ><svg
+                                viewBox="0 0 16 16"
+                                width="12"
+                                height="12"
+                                fill="currentColor"
+                                title="Shared with Public"
+                                class="x19dipnz x1lliihq x1k90msu x2h7rmj x1qfuztq"
+                                style="--color: var(--secondary-icon)"
+                              >
+                                <title>Shared with Public</title>
+                                <g
+                                  fill-rule="evenodd"
+                                  transform="translate(-448 -544)"
+                                >
+                                  <g>
+                                    <path
+                                      d="M109.5 408.5c0 3.23-2.04 5.983-4.903 7.036l.07-.036c1.167-1 1.814-2.967 2-3.834.214-1 .303-1.3-.5-1.96-.31-.253-.677-.196-1.04-.476-.246-.19-.356-.59-.606-.73-.594-.337-1.107.11-1.954.223a2.666 2.666 0 0 1-1.15-.123c-.007 0-.007 0-.013-.004l-.083-.03c-.164-.082-.077-.206.006-.36h-.006c.086-.17.086-.376-.05-.529-.19-.214-.54-.214-.804-.224-.106-.003-.21 0-.313.004l-.003-.004c-.04 0-.084.004-.124.004h-.037c-.323.007-.666-.034-.893-.314-.263-.353-.29-.733.097-1.09.28-.26.863-.8 1.807-.22.603.37 1.166.667 1.666.5.33-.11.48-.303.094-.87a1.128 1.128 0 0 1-.214-.73c.067-.776.687-.84 1.164-1.2.466-.356.68-.943.546-1.457-.106-.413-.51-.873-1.28-1.01a7.49 7.49 0 0 1 6.524 7.434"
+                                      transform="translate(354 143.5)"
+                                    ></path>
+                                    <path
+                                      d="M104.107 415.696A7.498 7.498 0 0 1 94.5 408.5a7.48 7.48 0 0 1 3.407-6.283 5.474 5.474 0 0 0-1.653 2.334c-.753 2.217-.217 4.075 2.29 4.075.833 0 1.4.561 1.333 2.375-.013.403.52 1.78 2.45 1.89.7.04 1.184 1.053 1.33 1.74.06.29.127.65.257.97a.174.174 0 0 0 .193.096"
+                                      transform="translate(354 143.5)"
+                                    ></path>
+                                    <path
+                                      fill-rule="nonzero"
+                                      d="M110 408.5a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-1 0a7 7 0 1 0-14 0 7 7 0 0 0 14 0z"
+                                      transform="translate(354 143.5)"
+                                    ></path>
+                                  </g>
+                                </g></svg></span></span
+                          ><!--$--><!--/$--></span
+                        >
+                      </div>
+                    </figure>
+                  </div>
+                  <!-- xcross option -->
+                  <div class="flex items-center space-x-3">
+                    <h2
+                      class="text-2xl pb-5 text-gray-500 font-bold cursor-pointer"
+                    >
+                      ...
+                    </h2>
+                    <div>
+                      <a
+                        aria-label="hide post"
+                        class="x1i10hfl x1ejq31n xd10rxx x1sy0etr x17r0tee x1ypdohk xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r x16tdsg8 x1hl2dhg xggy1nq x87ps6o x1lku1pv x1a2a7pz x6s0dn4 x14yjl9h xudhj91 x18nykt9 xww2gxu x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x78zum5 xl56j7k xexx8yu x4uap5 x18d9i69 xkhd6sd x1n2onr6 xc9qbxq x14qfxbe xjbqb8w"
+                        href="#"
+                        role="link"
+                        tabindex="0"
+                        class=""
+                        ><i
+                          data-visualcompletion="css-img"
+                          class="x1b0d499 x1d69dk1"
+                          style="
+                            background-position: 0 -473px;
+                            background-size: auto;
+                            width: 20px;
+                            height: 20px;
+                            background-repeat: no-repeat;
+                            display: inline-block;
+                          "
+                        ></i>
+                        <div
+                          class="text-gray-500 x1ey2m1c xds687c x17qophe xg01cxk x47corl x10l6tqk x13vifvy x1ebt8du x19991ni x1dhq9h xzolkzo x12go9s9 x1rnf11y xprq8jg"
+                          role="none"
+                          data-visualcompletion="ignore"
+                        ></div
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- image -->
+                <div
+                  class="py-20 pt-14 my-2 text-center px-2 border border-l-0 border-r-0 border-gray-200"
+                >
+                  <h4
+                    class="text-base text-indigo-600 font-semibold tracking-wide uppercase"
+                  >
+                    Features
+                  </h4>
+                  <p
+                    class="mt-2 text-6xl font-bold tracking-tight text-gray-900"
+                  >
+                    How we change the game
+                  </p>
+                </div>
+                <!-- images bottom -->
+                <div>
+                  <!-- react -->
+                  <div class="px-4 py-2 flex items-center justify-between">
+                    <div class="flex items-center space-x-0 bg-white">
+                      <img
+                        class="w-5 h-5 -mr-[1px] bg-white"
+                        src="/images/like.jpg"
+                        alt=""
+                      />
+                      <img
+                        class="w-5 h-5 bg-white"
+                        src="/images/heart.png"
+                        alt=""
+                      />
+                      <h2 class="pl-1 text-base font-normal text-[#898A8D]">
+                        Ali and 50k others
+                      </h2>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                      <div class="flex items-center">
+                        <h2 class="mr-1 text-base font-normal text-[#898A8D]">
+                          10k
+                        </h2>
+                        <img class="w-5 h-5" src="/images/comment.png" alt="" />
+                      </div>
+                      <div class="flex items-center">
+                        <h2 class="mr-1 text-base font-normal text-[#898A8D]">
+                          1k
+                        </h2>
+                        <img class="w-5 h-5" src="/images/share.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <!-- border -->
+                  <p class="border-b border-gray-200 mx-4"></p>
+                  <!-- like and commands -->
+                  <div
+                    class="px-4 py-2 flex items-center justify-center space-x-20"
+                  >
+                    <div class="flex items-center space-x-1">
+                      <img
+                        class="w-5 h-5 -mr-2"
+                        src="/images/icons8-like-96.png"
+                        alt=""
+                      />
+
+                      <h2 class="pl-2 text-base font-medium text-[#898A8D]">
+                        Like
+                      </h2>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                      <img
+                        class="w-5 h-5 -mr-2"
+                        src="/images/comment1.png"
+                        alt=""
+                      />
+
+                      <h2 class="pl-2 text-base font-medium text-[#898A8D]">
+                        Comment
+                      </h2>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                      <img
+                        class="w-5 h-5 -mr-2"
+                        src="/images/share1.png"
+                        alt=""
+                      />
+
+                      <h2 class="pl-2 text-base font-medium text-[#898A8D]">
+                        Share
+                      </h2>
+                    </div>
+                  </div>
+                  <!-- border -->
+                  <p class="border-b border-gray-200 mx-3"></p>
+                  <div></div>
+                </div>
+              </div>
+
+              <!-- 4th post -->
+              <div class="bg-white shadow-lg rounded-lg">
+                <!-- post&text -->
+                <div class="flex justify-between px-4 pb-1 pt-1">
+                  <div
+                    class="relative flex items-center space-x-2 cursor-pointer"
+                  >
+                    <img
+                      class="rounded-full w-[41px] h-[41px]"
+                      src="/images/admin-asghar.png"
+                      alt=""
+                    />
+                    <p
+                      class="absolute bottom-[6px] left-[22px] border-2 border-white p-[4px] bg-green-500 rounded-full"
+                    ></p>
+                    <figure class="space-y-0">
+                      <h2
+                        class="text-[16px] pb-0 text-gray-700 font-medium tracking-normal"
+                      >
+                        Asghar Ali
+                      </h2>
+                      <div class="flex items-center space-x-1">
+                        <p class="text-[12px] pt-0 font-semibold text-gray-400">
+                          03,2024
+                        </p>
+                        <span class="xuxw1ft"
+                          ><span
+                            class="x4k7w5x x1h91t0o x1h9r5lt x1jfb8zj xv2umb2 x1beo9mf xaigb6o x12ejxvf x3igimt xarpa2k xedcshv x1lytzrv x1t2pt76 x7ja8zs x1qrby5j"
+                            ><span class="x1rg5ohu x1n2onr6 xs7f9wi"
+                              ><svg
+                                viewBox="0 0 16 16"
+                                width="12"
+                                height="12"
+                                fill="currentColor"
+                                title="Shared with Public"
+                                class="x19dipnz x1lliihq x1k90msu x2h7rmj x1qfuztq"
+                                style="--color: var(--secondary-icon)"
+                              >
+                                <title>Shared with Public</title>
+                                <g
+                                  fill-rule="evenodd"
+                                  transform="translate(-448 -544)"
+                                >
+                                  <g>
+                                    <path
+                                      d="M109.5 408.5c0 3.23-2.04 5.983-4.903 7.036l.07-.036c1.167-1 1.814-2.967 2-3.834.214-1 .303-1.3-.5-1.96-.31-.253-.677-.196-1.04-.476-.246-.19-.356-.59-.606-.73-.594-.337-1.107.11-1.954.223a2.666 2.666 0 0 1-1.15-.123c-.007 0-.007 0-.013-.004l-.083-.03c-.164-.082-.077-.206.006-.36h-.006c.086-.17.086-.376-.05-.529-.19-.214-.54-.214-.804-.224-.106-.003-.21 0-.313.004l-.003-.004c-.04 0-.084.004-.124.004h-.037c-.323.007-.666-.034-.893-.314-.263-.353-.29-.733.097-1.09.28-.26.863-.8 1.807-.22.603.37 1.166.667 1.666.5.33-.11.48-.303.094-.87a1.128 1.128 0 0 1-.214-.73c.067-.776.687-.84 1.164-1.2.466-.356.68-.943.546-1.457-.106-.413-.51-.873-1.28-1.01a7.49 7.49 0 0 1 6.524 7.434"
+                                      transform="translate(354 143.5)"
+                                    ></path>
+                                    <path
+                                      d="M104.107 415.696A7.498 7.498 0 0 1 94.5 408.5a7.48 7.48 0 0 1 3.407-6.283 5.474 5.474 0 0 0-1.653 2.334c-.753 2.217-.217 4.075 2.29 4.075.833 0 1.4.561 1.333 2.375-.013.403.52 1.78 2.45 1.89.7.04 1.184 1.053 1.33 1.74.06.29.127.65.257.97a.174.174 0 0 0 .193.096"
+                                      transform="translate(354 143.5)"
+                                    ></path>
+                                    <path
+                                      fill-rule="nonzero"
+                                      d="M110 408.5a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-1 0a7 7 0 1 0-14 0 7 7 0 0 0 14 0z"
+                                      transform="translate(354 143.5)"
+                                    ></path>
+                                  </g>
+                                </g></svg></span></span
+                          ><!--$--><!--/$--></span
+                        >
+                      </div>
+                    </figure>
+                  </div>
+                  <!-- xcross option -->
+                  <div class="flex items-center space-x-3">
+                    <h2
+                      class="text-2xl pb-5 text-gray-500 font-bold cursor-pointer"
+                    >
+                      ...
+                    </h2>
+                    <div>
+                      <a
+                        aria-label="hide post"
+                        class="x1i10hfl x1ejq31n xd10rxx x1sy0etr x17r0tee x1ypdohk xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r x16tdsg8 x1hl2dhg xggy1nq x87ps6o x1lku1pv x1a2a7pz x6s0dn4 x14yjl9h xudhj91 x18nykt9 xww2gxu x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x78zum5 xl56j7k xexx8yu x4uap5 x18d9i69 xkhd6sd x1n2onr6 xc9qbxq x14qfxbe xjbqb8w"
+                        href="#"
+                        role="link"
+                        tabindex="0"
+                        class=""
+                        ><i
+                          data-visualcompletion="css-img"
+                          class="x1b0d499 x1d69dk1"
+                          style="
+                            background-position: 0 -473px;
+                            background-size: auto;
+                            width: 20px;
+                            height: 20px;
+                            background-repeat: no-repeat;
+                            display: inline-block;
+                          "
+                        ></i>
+                        <div
+                          class="text-gray-500 x1ey2m1c xds687c x17qophe xg01cxk x47corl x10l6tqk x13vifvy x1ebt8du x19991ni x1dhq9h xzolkzo x12go9s9 x1rnf11y xprq8jg"
+                          role="none"
+                          data-visualcompletion="ignore"
+                        ></div
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- post text -->
+                <div dir="auto" style="text-align: start" class="px-2 pb-2">
+                  Start a Fiverr gig for making attractive coming soon pages. I
+                  hope this helps me reach my goals, and, God willing, I'll
+                  create fantastic pages for clients soon.
+
+                  <span
+                    ><a
+                      class="text-blue-600 x1i10hfl xjbqb8w x1ejq31n xd10rxx x1sy0etr x17r0tee x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x1ypdohk xt0psk2 xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 x1hl2dhg xggy1nq x1a2a7pz xt0b8zv x1fey0fg"
+                      href="https://buff.ly/4afgix7?fbclid=IwAR1Qsn8asqmfmB2sSkVULSx2r5Zryos26BeXDTV5TeQzjle4_QLpcO1IKaY"
+                      rel="nofollow noreferrer"
+                      role="link"
+                      tabindex="0"
+                      target="_blank"
+                      >AsgharWeb.com</a
+                    ></span
+                  >
+                </div>
+
+                <!-- image -->
+                <div class="border border-l-0 border-r-0 border-gray-300">
+                  <img
+                    class="w-full"
+                    src="/images/Coming Soon Page.jpg"
+                    alt=""
+                  />
+                </div>
+                <!-- images bottom -->
+                <div>
+                  <!-- react -->
+                  <div class="px-4 py-2 flex items-center justify-between">
+                    <div class="flex items-center space-x-0 bg-white">
+                      <img
+                        class="w-5 h-5 -mr-[1px] bg-white"
+                        src="/images/like.jpg"
+                        alt=""
+                      />
+                      <img
+                        class="w-5 h-5 bg-white"
+                        src="/images/heart.png"
+                        alt=""
+                      />
+                      <h2 class="pl-1 text-base font-normal text-[#898A8D]">
+                        82
+                      </h2>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                      <div class="flex items-center">
+                        <h2 class="mr-1 text-base font-normal text-[#898A8D]">
+                          40
+                        </h2>
+                        <img class="w-5 h-5" src="/images/comment.png" alt="" />
+                      </div>
+                      <div class="flex items-center">
+                        <h2 class="mr-1 text-base font-normal text-[#898A8D]">
+                          42
+                        </h2>
+                        <img class="w-5 h-5" src="/images/share.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <!-- border -->
+                  <p class="border-b border-gray-200 mx-4"></p>
+                  <!-- like and commands -->
+                  <div
+                    class="px-4 py-2 flex items-center justify-center space-x-20"
+                  >
+                    <div class="flex items-center space-x-1">
+                      <img
+                        class="w-5 h-5 -mr-2"
+                        src="/images/icons8-like-96.png"
+                        alt=""
+                      />
+
+                      <h2 class="pl-2 text-base font-medium text-[#898A8D]">
+                        Like
+                      </h2>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                      <img
+                        class="w-5 h-5 -mr-2"
+                        src="/images/comment1.png"
+                        alt=""
+                      />
+
+                      <h2 class="pl-2 text-base font-medium text-[#898A8D]">
+                        Comment
+                      </h2>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                      <img
+                        class="w-5 h-5 -mr-2"
+                        src="/images/share1.png"
+                        alt=""
+                      />
+
+                      <h2 class="pl-2 text-base font-medium text-[#898A8D]">
+                        Share
+                      </h2>
+                    </div>
+                  </div>
+                  <!-- border -->
+                  <p class="border-b border-gray-200 mx-3"></p>
+                </div>
+              </div>
+
+              <!-- 5th post -->
+              <div class="bg-white shadow-lg rounded-lg">
+                <!-- post&text -->
+                <div class="flex justify-between px-4 pb-1 pt-1">
+                  <div
+                    class="relative flex items-center space-x-2 cursor-pointer"
+                  >
+                    <img
+                      class="rounded-full"
+                      src="/images/nobshop.jpg"
+                      alt=""
+                    />
+                    <p
+                      class="absolute bottom-[6px] left-[22px] border-2 border-white p-[4px] bg-green-500 rounded-full"
+                    ></p>
+                    <figure class="space-y-0">
+                      <h2
+                        class="text-[16px] pb-0 text-gray-700 font-medium tracking-normal"
+                      >
+                        Nobshop
+                      </h2>
+                      <div class="flex items-center space-x-1">
+                        <p class="text-[12px] pt-0 font-semibold text-gray-400">
+                          Suggest for you . 2d .
+                        </p>
+                        <span class="xuxw1ft"
+                          ><span
+                            class="x4k7w5x x1h91t0o x1h9r5lt x1jfb8zj xv2umb2 x1beo9mf xaigb6o x12ejxvf x3igimt xarpa2k xedcshv x1lytzrv x1t2pt76 x7ja8zs x1qrby5j"
+                            ><span class="x1rg5ohu x1n2onr6 xs7f9wi"
+                              ><svg
+                                viewBox="0 0 16 16"
+                                width="12"
+                                height="12"
+                                fill="currentColor"
+                                title="Shared with Public"
+                                class="x19dipnz x1lliihq x1k90msu x2h7rmj x1qfuztq"
+                                style="--color: var(--secondary-icon)"
+                              >
+                                <title>Shared with Public</title>
+                                <g
+                                  fill-rule="evenodd"
+                                  transform="translate(-448 -544)"
+                                >
+                                  <g>
+                                    <path
+                                      d="M109.5 408.5c0 3.23-2.04 5.983-4.903 7.036l.07-.036c1.167-1 1.814-2.967 2-3.834.214-1 .303-1.3-.5-1.96-.31-.253-.677-.196-1.04-.476-.246-.19-.356-.59-.606-.73-.594-.337-1.107.11-1.954.223a2.666 2.666 0 0 1-1.15-.123c-.007 0-.007 0-.013-.004l-.083-.03c-.164-.082-.077-.206.006-.36h-.006c.086-.17.086-.376-.05-.529-.19-.214-.54-.214-.804-.224-.106-.003-.21 0-.313.004l-.003-.004c-.04 0-.084.004-.124.004h-.037c-.323.007-.666-.034-.893-.314-.263-.353-.29-.733.097-1.09.28-.26.863-.8 1.807-.22.603.37 1.166.667 1.666.5.33-.11.48-.303.094-.87a1.128 1.128 0 0 1-.214-.73c.067-.776.687-.84 1.164-1.2.466-.356.68-.943.546-1.457-.106-.413-.51-.873-1.28-1.01a7.49 7.49 0 0 1 6.524 7.434"
+                                      transform="translate(354 143.5)"
+                                    ></path>
+                                    <path
+                                      d="M104.107 415.696A7.498 7.498 0 0 1 94.5 408.5a7.48 7.48 0 0 1 3.407-6.283 5.474 5.474 0 0 0-1.653 2.334c-.753 2.217-.217 4.075 2.29 4.075.833 0 1.4.561 1.333 2.375-.013.403.52 1.78 2.45 1.89.7.04 1.184 1.053 1.33 1.74.06.29.127.65.257.97a.174.174 0 0 0 .193.096"
+                                      transform="translate(354 143.5)"
+                                    ></path>
+                                    <path
+                                      fill-rule="nonzero"
+                                      d="M110 408.5a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-1 0a7 7 0 1 0-14 0 7 7 0 0 0 14 0z"
+                                      transform="translate(354 143.5)"
+                                    ></path>
+                                  </g>
+                                </g></svg></span></span
+                          ><!--$--><!--/$--></span
+                        >
+                      </div>
+                    </figure>
+                  </div>
+                  <!-- xcross option -->
+                  <div class="flex items-center space-x-3">
+                    <h2
+                      class="text-2xl pb-5 text-gray-500 font-bold cursor-pointer"
+                    >
+                      ...
+                    </h2>
+                    <div>
+                      <a
+                        aria-label="hide post"
+                        class="x1i10hfl x1ejq31n xd10rxx x1sy0etr x17r0tee x1ypdohk xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r x16tdsg8 x1hl2dhg xggy1nq x87ps6o x1lku1pv x1a2a7pz x6s0dn4 x14yjl9h xudhj91 x18nykt9 xww2gxu x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x78zum5 xl56j7k xexx8yu x4uap5 x18d9i69 xkhd6sd x1n2onr6 xc9qbxq x14qfxbe xjbqb8w"
+                        href="#"
+                        role="link"
+                        tabindex="0"
+                        class=""
+                        ><i
+                          data-visualcompletion="css-img"
+                          class="x1b0d499 x1d69dk1"
+                          style="
+                            background-position: 0 -473px;
+                            background-size: auto;
+                            width: 20px;
+                            height: 20px;
+                            background-repeat: no-repeat;
+                            display: inline-block;
+                          "
+                        ></i>
+                        <div
+                          class="text-gray-500 x1ey2m1c xds687c x17qophe xg01cxk x47corl x10l6tqk x13vifvy x1ebt8du x19991ni x1dhq9h xzolkzo x12go9s9 x1rnf11y xprq8jg"
+                          role="none"
+                          data-visualcompletion="ignore"
+                        ></div
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- post text -->
+                <div dir="auto" style="text-align: start" class="px-2 pb-2">
+                  Guptill hits 22 runs in Saim's over 🔥<br />
+                  شکر ہے گپٹل بھی کھیل رہا تھا ورنہ میں نے تو صائم ایوب کو باؤلر
+                  سمجھا ہوا
+                  <li class="list-none">
+                    <a class="text-blue-600" href="#">##HBLPSL9</a>
+                    <a class="text-blue-600" href="#">#PZvIU</a>
+                    <a class="text-blue-600" href="#">#KhulKeKhel</a>
+                    <a class="text-blue-600" href="#">#Guptill</a>
+                  </li>
+                </div>
+
+                <!-- image -->
+                <div class="border border-l-0 border-r-0 border-gray-300">
+                  <img class="w-full" src="/images/guptil.jpg" alt="" />
+                </div>
+                <!-- images bottom -->
+                <div>
+                  <!-- react -->
+                  <div class="px-4 py-2 flex items-center justify-between">
+                    <div class="flex items-center space-x-0 bg-white">
+                      <img
+                        class="w-5 h-5 -mr-[1px] bg-white"
+                        src="/images/like.jpg"
+                        alt=""
+                      />
+                      <img
+                        class="w-5 h-5 bg-white"
+                        src="/images/heart.png"
+                        alt=""
+                      />
+                      <h2 class="pl-1 text-base font-normal text-[#898A8D]">
+                        Asghar and 235 others
+                      </h2>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                      <div class="flex items-center">
+                        <h2 class="mr-1 text-base font-normal text-[#898A8D]">
+                          26
+                        </h2>
+                        <img class="w-5 h-5" src="/images/comment.png" alt="" />
+                      </div>
+                      <div class="flex items-center">
+                        <h2 class="mr-1 text-base font-normal text-[#898A8D]">
+                          2
+                        </h2>
+                        <img class="w-5 h-5" src="/images/share.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <!-- border -->
+                  <p class="border-b border-gray-200 mx-4"></p>
+                  <!-- like and commands -->
+                  <div
+                    class="px-4 py-2 flex items-center justify-center space-x-20"
+                  >
+                    <div class="flex items-center space-x-1">
+                      <img
+                        class="w-5 h-5 -mr-2"
+                        src="/images/icons8-like-96.png"
+                        alt=""
+                      />
+
+                      <h2 class="pl-2 text-base font-medium text-[#898A8D]">
+                        Like
+                      </h2>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                      <img
+                        class="w-5 h-5 -mr-2"
+                        src="/images/comment1.png"
+                        alt=""
+                      />
+
+                      <h2 class="pl-2 text-base font-medium text-[#898A8D]">
+                        Comment
+                      </h2>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                      <img
+                        class="w-5 h-5 -mr-2"
+                        src="/images/share1.png"
+                        alt=""
+                      />
+
+                      <h2 class="pl-2 text-base font-medium text-[#898A8D]">
+                        Share
+                      </h2>
+                    </div>
+                  </div>
+                  <!-- border -->
+                  <p class="border-b border-gray-200 mx-3"></p>
+                </div>
+
+                <!-- give commmit -->
+                <div class="px-5 flex items-center space-x-2 py-2">
+                  <div class="relative rounded-full cursor-pointer bg-gray-200">
+                    <img
+                      class="bg-blue-800 rounded-full w-[42px] h-9"
+                      src="/images/admin-asghar.png"
+                      alt=""
+                    />
+
+                    <div
+                      class="flex items-center absolute w-4 h-4 top-[26px] left-[25px] px-[1px] border-white border-2 bg-gray-200 rounded-full"
+                    >
+                      <img
+                        class="text-white w-full"
+                        src="images/down.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <input
+                    class="bg-[#f0f2f5] text-[15x] placeholder:text-gray-500 rounded-full w-full h-9 px-3 focus:outline-none"
+                    type="text"
+                    placeholder="write a comment..."
+                  />
+                </div>
+              </div>
+
+              <!-- 6th post -->
+              <div class="bg-white shadow-lg rounded-lg">
+                <!-- post&text -->
+                <div class="flex justify-between px-4 pb-1 pt-1">
+                  <div
+                    class="relative flex items-center space-x-2 cursor-pointer"
+                  >
+                    <img
+                      class="rounded-full w-[41px] h-[41px]"
+                      src="/images/imran.jpg"
+                      alt=""
+                    />
+                    <p
+                      class="absolute bottom-[6px] left-[22px] border-2 border-white p-[4px] bg-green-500 rounded-full"
+                    ></p>
+                    <figure class="space-y-0">
+                      <h2
+                        class="text-[16px] pb-0 text-gray-700 font-medium tracking-normal"
+                      >
+                        Satisfying Cricket Picture
+                      </h2>
+                      <div class="flex items-center space-x-1">
+                        <p class="text-[12px] pt-0 font-semibold text-gray-400">
+                          1d .
+                        </p>
+                        <span class="xuxw1ft"
+                          ><span
+                            class="x4k7w5x x1h91t0o x1h9r5lt x1jfb8zj xv2umb2 x1beo9mf xaigb6o x12ejxvf x3igimt xarpa2k xedcshv x1lytzrv x1t2pt76 x7ja8zs x1qrby5j"
+                            ><span class="x1rg5ohu x1n2onr6 xs7f9wi"
+                              ><svg
+                                viewBox="0 0 16 16"
+                                width="12"
+                                height="12"
+                                fill="currentColor"
+                                title="Shared with Public"
+                                class="x19dipnz x1lliihq x1k90msu x2h7rmj x1qfuztq"
+                                style="--color: var(--secondary-icon)"
+                              >
+                                <title>Shared with Public</title>
+                                <g
+                                  fill-rule="evenodd"
+                                  transform="translate(-448 -544)"
+                                >
+                                  <g>
+                                    <path
+                                      d="M109.5 408.5c0 3.23-2.04 5.983-4.903 7.036l.07-.036c1.167-1 1.814-2.967 2-3.834.214-1 .303-1.3-.5-1.96-.31-.253-.677-.196-1.04-.476-.246-.19-.356-.59-.606-.73-.594-.337-1.107.11-1.954.223a2.666 2.666 0 0 1-1.15-.123c-.007 0-.007 0-.013-.004l-.083-.03c-.164-.082-.077-.206.006-.36h-.006c.086-.17.086-.376-.05-.529-.19-.214-.54-.214-.804-.224-.106-.003-.21 0-.313.004l-.003-.004c-.04 0-.084.004-.124.004h-.037c-.323.007-.666-.034-.893-.314-.263-.353-.29-.733.097-1.09.28-.26.863-.8 1.807-.22.603.37 1.166.667 1.666.5.33-.11.48-.303.094-.87a1.128 1.128 0 0 1-.214-.73c.067-.776.687-.84 1.164-1.2.466-.356.68-.943.546-1.457-.106-.413-.51-.873-1.28-1.01a7.49 7.49 0 0 1 6.524 7.434"
+                                      transform="translate(354 143.5)"
+                                    ></path>
+                                    <path
+                                      d="M104.107 415.696A7.498 7.498 0 0 1 94.5 408.5a7.48 7.48 0 0 1 3.407-6.283 5.474 5.474 0 0 0-1.653 2.334c-.753 2.217-.217 4.075 2.29 4.075.833 0 1.4.561 1.333 2.375-.013.403.52 1.78 2.45 1.89.7.04 1.184 1.053 1.33 1.74.06.29.127.65.257.97a.174.174 0 0 0 .193.096"
+                                      transform="translate(354 143.5)"
+                                    ></path>
+                                    <path
+                                      fill-rule="nonzero"
+                                      d="M110 408.5a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-1 0a7 7 0 1 0-14 0 7 7 0 0 0 14 0z"
+                                      transform="translate(354 143.5)"
+                                    ></path>
+                                  </g>
+                                </g></svg></span></span
+                          ><!--$--><!--/$--></span
+                        >
+                      </div>
+                    </figure>
+                  </div>
+                  <!-- xcross option -->
+                  <div class="flex items-center space-x-3">
+                    <h2
+                      class="text-2xl pb-5 text-gray-500 font-bold cursor-pointer"
+                    >
+                      ...
+                    </h2>
+                    <div>
+                      <a
+                        aria-label="hide post"
+                        class="x1i10hfl x1ejq31n xd10rxx x1sy0etr x17r0tee x1ypdohk xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r x16tdsg8 x1hl2dhg xggy1nq x87ps6o x1lku1pv x1a2a7pz x6s0dn4 x14yjl9h xudhj91 x18nykt9 xww2gxu x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x78zum5 xl56j7k xexx8yu x4uap5 x18d9i69 xkhd6sd x1n2onr6 xc9qbxq x14qfxbe xjbqb8w"
+                        href="#"
+                        role="link"
+                        tabindex="0"
+                        class=""
+                        ><i
+                          data-visualcompletion="css-img"
+                          class="x1b0d499 x1d69dk1"
+                          style="
+                            background-position: 0 -473px;
+                            background-size: auto;
+                            width: 20px;
+                            height: 20px;
+                            background-repeat: no-repeat;
+                            display: inline-block;
+                          "
+                        ></i>
+                        <div
+                          class="text-gray-500 x1ey2m1c xds687c x17qophe xg01cxk x47corl x10l6tqk x13vifvy x1ebt8du x19991ni x1dhq9h xzolkzo x12go9s9 x1rnf11y xprq8jg"
+                          role="none"
+                          data-visualcompletion="ignore"
+                        ></div
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- post text -->
+                <div dir="auto" style="text-align: start" class="px-2 pb-2">
+                  Saim Ayub while giving interview to Zalmi TV: Sydney test ki
+                  1st innings me Zero pe out hua ta tu jab 2nd innings me
+                  batting karne aya tu sare Australians bol rahe te ke hoping
+                  for a couple (to get out for zero in 2nd innings too). Jab
+                  Starc paas se guzra 1,2 balls ki usne Abdullah Shafique ko tu
+                  me ne usko bola BRO Why are you Bowling Slow in the 2nd
+                  innings? I think you are Tired. Next ball pe ABDULLAH CLEAN
+                  BOWLED 😂 Starc ne meri taraf dekha aur me ne Apna mun dosri
+                  taraf kar liya 💀
+                  <span
+                    ><a
+                      class="text-blue-600 x1i10hfl xjbqb8w x1ejq31n xd10rxx x1sy0etr x17r0tee x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x1ypdohk xt0psk2 xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 x1hl2dhg xggy1nq x1a2a7pz xt0b8zv x1fey0fg"
+                      href="https://buff.ly/4afgix7?fbclid=IwAR1Qsn8asqmfmB2sSkVULSx2r5Zryos26BeXDTV5TeQzjle4_QLpcO1IKaY"
+                      rel="nofollow noreferrer"
+                      role="link"
+                      tabindex="0"
+                      target="_blank"
+                      >https://buff.ly/4afgix7</a
+                    ></span
+                  >
+                </div>
+
+                <!-- image -->
+                <div class="border border-l-0 border-r-0 border-gray-300">
+                  <img class="w-full" src="/images/sainayub.jpg" alt="" />
+                </div>
+                <!-- images bottom -->
+                <div>
+                  <!-- react -->
+                  <div class="px-4 py-2 flex items-center justify-between">
+                    <div class="flex items-center space-x-0 bg-white">
+                      <img
+                        class="w-5 h-5 -mr-[1px] bg-white"
+                        src="/images/like.jpg"
+                        alt=""
+                      />
+                      <img
+                        class="w-5 h-5 bg-white"
+                        src="/images/laugh.png"
+                        alt=""
+                      />
+                      <h2 class="pl-1 text-base font-normal text-[#898A8D]">
+                        17k
+                      </h2>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                      <div class="flex items-center">
+                        <h2 class="mr-1 text-base font-normal text-[#898A8D]">
+                          490
+                        </h2>
+                        <img class="w-5 h-5" src="/images/comment.png" alt="" />
+                      </div>
+                      <div class="flex items-center">
+                        <h2 class="mr-1 text-base font-normal text-[#898A8D]">
+                          472
+                        </h2>
+                        <img class="w-5 h-5" src="/images/share.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <!-- border -->
+                  <p class="border-b border-gray-200 mx-4"></p>
+                  <!-- like and commands -->
+                  <div
+                    class="px-4 py-2 flex items-center justify-center space-x-20"
+                  >
+                    <div class="flex items-center space-x-1">
+                      <img
+                        class="w-5 h-5 -mr-2"
+                        src="/images/icons8-like-96.png"
+                        alt=""
+                      />
+
+                      <h2 class="pl-2 text-base font-medium text-[#898A8D]">
+                        Like
+                      </h2>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                      <img
+                        class="w-5 h-5 -mr-2"
+                        src="/images/comment1.png"
+                        alt=""
+                      />
+
+                      <h2 class="pl-2 text-base font-medium text-[#898A8D]">
+                        Comment
+                      </h2>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                      <img
+                        class="w-5 h-5 -mr-2"
+                        src="/images/share1.png"
+                        alt=""
+                      />
+
+                      <h2 class="pl-2 text-base font-medium text-[#898A8D]">
+                        Share
+                      </h2>
+                    </div>
+                  </div>
+                  <!-- border -->
+                  <p class="border-b border-gray-200 mx-3"></p>
+                </div>
+              </div>
+
+              <!-- 7th post -->
+              <div class="bg-white shadow-lg rounded-lg">
+                <!-- post&text -->
+                <div class="flex justify-between px-4 pb-1 pt-1">
+                  <div
+                    class="relative flex items-center space-x-2 cursor-pointer"
+                  >
+                    <img
+                      class="rounded-full w-[41px] h-[41px]"
+                      src="/images/admin-asghar.png"
+                      alt=""
+                    />
+                    <p
+                      class="absolute bottom-[6px] left-[22px] border-2 border-white p-[4px] bg-green-500 rounded-full"
+                    ></p>
+                    <figure class="space-y-0">
+                      <h2
+                        class="text-[16px] pb-0 text-gray-700 font-medium tracking-normal"
+                      >
+                        Asghar Ali
+                      </h2>
+                      <div class="flex items-center space-x-1">
+                        <p class="text-[12px] pt-0 font-semibold text-gray-400">
+                          13,2024
+                        </p>
+                        <span class="xuxw1ft"
+                          ><span
+                            class="x4k7w5x x1h91t0o x1h9r5lt x1jfb8zj xv2umb2 x1beo9mf xaigb6o x12ejxvf x3igimt xarpa2k xedcshv x1lytzrv x1t2pt76 x7ja8zs x1qrby5j"
+                            ><span class="x1rg5ohu x1n2onr6 xs7f9wi"
+                              ><svg
+                                viewBox="0 0 16 16"
+                                width="12"
+                                height="12"
+                                fill="currentColor"
+                                title="Shared with Public"
+                                class="x19dipnz x1lliihq x1k90msu x2h7rmj x1qfuztq"
+                                style="--color: var(--secondary-icon)"
+                              >
+                                <title>Shared with Public</title>
+                                <g
+                                  fill-rule="evenodd"
+                                  transform="translate(-448 -544)"
+                                >
+                                  <g>
+                                    <path
+                                      d="M109.5 408.5c0 3.23-2.04 5.983-4.903 7.036l.07-.036c1.167-1 1.814-2.967 2-3.834.214-1 .303-1.3-.5-1.96-.31-.253-.677-.196-1.04-.476-.246-.19-.356-.59-.606-.73-.594-.337-1.107.11-1.954.223a2.666 2.666 0 0 1-1.15-.123c-.007 0-.007 0-.013-.004l-.083-.03c-.164-.082-.077-.206.006-.36h-.006c.086-.17.086-.376-.05-.529-.19-.214-.54-.214-.804-.224-.106-.003-.21 0-.313.004l-.003-.004c-.04 0-.084.004-.124.004h-.037c-.323.007-.666-.034-.893-.314-.263-.353-.29-.733.097-1.09.28-.26.863-.8 1.807-.22.603.37 1.166.667 1.666.5.33-.11.48-.303.094-.87a1.128 1.128 0 0 1-.214-.73c.067-.776.687-.84 1.164-1.2.466-.356.68-.943.546-1.457-.106-.413-.51-.873-1.28-1.01a7.49 7.49 0 0 1 6.524 7.434"
+                                      transform="translate(354 143.5)"
+                                    ></path>
+                                    <path
+                                      d="M104.107 415.696A7.498 7.498 0 0 1 94.5 408.5a7.48 7.48 0 0 1 3.407-6.283 5.474 5.474 0 0 0-1.653 2.334c-.753 2.217-.217 4.075 2.29 4.075.833 0 1.4.561 1.333 2.375-.013.403.52 1.78 2.45 1.89.7.04 1.184 1.053 1.33 1.74.06.29.127.65.257.97a.174.174 0 0 0 .193.096"
+                                      transform="translate(354 143.5)"
+                                    ></path>
+                                    <path
+                                      fill-rule="nonzero"
+                                      d="M110 408.5a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-1 0a7 7 0 1 0-14 0 7 7 0 0 0 14 0z"
+                                      transform="translate(354 143.5)"
+                                    ></path>
+                                  </g>
+                                </g></svg></span></span
+                          ><!--$--><!--/$--></span
+                        >
+                      </div>
+                    </figure>
+                  </div>
+                  <!-- xcross option -->
+                  <div class="flex items-center space-x-3">
+                    <h2
+                      class="text-2xl pb-5 text-gray-500 font-bold cursor-pointer"
+                    >
+                      ...
+                    </h2>
+                    <div>
+                      <a
+                        aria-label="hide post"
+                        class="x1i10hfl x1ejq31n xd10rxx x1sy0etr x17r0tee x1ypdohk xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r x16tdsg8 x1hl2dhg xggy1nq x87ps6o x1lku1pv x1a2a7pz x6s0dn4 x14yjl9h xudhj91 x18nykt9 xww2gxu x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x78zum5 xl56j7k xexx8yu x4uap5 x18d9i69 xkhd6sd x1n2onr6 xc9qbxq x14qfxbe xjbqb8w"
+                        href="#"
+                        role="link"
+                        tabindex="0"
+                        class=""
+                        ><i
+                          data-visualcompletion="css-img"
+                          class="x1b0d499 x1d69dk1"
+                          style="
+                            background-position: 0 -473px;
+                            background-size: auto;
+                            width: 20px;
+                            height: 20px;
+                            background-repeat: no-repeat;
+                            display: inline-block;
+                          "
+                        ></i>
+                        <div
+                          class="text-gray-500 x1ey2m1c xds687c x17qophe xg01cxk x47corl x10l6tqk x13vifvy x1ebt8du x19991ni x1dhq9h xzolkzo x12go9s9 x1rnf11y xprq8jg"
+                          role="none"
+                          data-visualcompletion="ignore"
+                        ></div
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- post text -->
+                <div dir="auto" style="text-align: start" class="px-2 pb-2">
+                  I specialize in crafting stunning websites with HTML, CSS, and
+                  Tailwind CSS. Whether it's a sleek Tailwind design or a
+                  responsive Bootstrap layout, I bring your ideas to life with
+                  pixel-perfect precision. With expertise in HTMLCSS,
+                  Tailwindcss, Bootstrap, and basic PHP functions, I create
+                  top-notch, hand-coded websites that guarantee a seamless user
+                  experience. W3C code validations, and friendly communication.
+                  Let's collaborate and build a website that reflects your brand
+                  beautifully and performs flawlessly across all devices
+                  attendance tracking and payments processing, among other
+                  functionalities.
+
+                  <span
+                    ><a
+                      class="text-blue-600 x1i10hfl xjbqb8w x1ejq31n xd10rxx x1sy0etr x17r0tee x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x1ypdohk xt0psk2 xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 x1hl2dhg xggy1nq x1a2a7pz xt0b8zv x1fey0fg"
+                      href="https://buff.ly/4afgix7?fbclid=IwAR1Qsn8asqmfmB2sSkVULSx2r5Zryos26BeXDTV5TeQzjle4_QLpcO1IKaY"
+                      rel="nofollow noreferrer"
+                      role="link"
+                      tabindex="0"
+                      target="_blank"
+                      >AsgharWeb.com</a
+                    ></span
+                  >
+                </div>
+
+                <!-- image -->
+                <div class="border border-l-0 border-r-0 border-gray-300">
+                  <img
+                    class="w-full"
+                    src="/images/Coming Soon Page1.png"
+                    alt=""
+                  />
+                </div>
+                <!-- images bottom -->
+                <div>
+                  <!-- react -->
+                  <div class="px-4 py-2 flex items-center justify-between">
+                    <div class="flex items-center space-x-0 bg-white">
+                      <img
+                        class="w-5 h-5 -mr-[1px] bg-white"
+                        src="/images/like.jpg"
+                        alt=""
+                      />
+                      <img
+                        class="w-5 h-5 bg-white"
+                        src="/images/heart.png"
+                        alt=""
+                      />
+                      <h2 class="pl-1 text-base font-normal text-[#898A8D]">
+                        82
+                      </h2>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                      <div class="flex items-center">
+                        <h2 class="mr-1 text-base font-normal text-[#898A8D]">
+                          40
+                        </h2>
+                        <img class="w-5 h-5" src="/images/comment.png" alt="" />
+                      </div>
+                      <div class="flex items-center">
+                        <h2 class="mr-1 text-base font-normal text-[#898A8D]">
+                          42
+                        </h2>
+                        <img class="w-5 h-5" src="/images/share.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <!-- border -->
+                  <p class="border-b border-gray-200 mx-4"></p>
+                  <!-- like and commands -->
+                  <div
+                    class="px-4 py-2 flex items-center justify-center space-x-20"
+                  >
+                    <div class="flex items-center space-x-1">
+                      <img
+                        class="w-5 h-5 -mr-2"
+                        src="/images/icons8-like-96.png"
+                        alt=""
+                      />
+
+                      <h2 class="pl-2 text-base font-medium text-[#898A8D]">
+                        Like
+                      </h2>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                      <img
+                        class="w-5 h-5 -mr-2"
+                        src="/images/comment1.png"
+                        alt=""
+                      />
+
+                      <h2 class="pl-2 text-base font-medium text-[#898A8D]">
+                        Comment
+                      </h2>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                      <img
+                        class="w-5 h-5 -mr-2"
+                        src="/images/share1.png"
+                        alt=""
+                      />
+
+                      <h2 class="pl-2 text-base font-medium text-[#898A8D]">
+                        Share
+                      </h2>
+                    </div>
+                  </div>
+                  <!-- border -->
+                  <p class="border-b border-gray-200 mx-3"></p>
+                </div>
+              </div>
+
+              <!-- 8th post -->
+              <div class="bg-white shadow-lg rounded-lg">
+                <!-- post&text -->
+                <div class="flex justify-between px-4 pb-1 pt-1">
+                  <div
+                    class="relative flex items-center space-x-2 cursor-pointer"
+                  >
+                    <img
+                      class="rounded-full w-[41px] h-[41px]"
+                      src="/images/moshpro.jpg"
+                      alt=""
+                    />
+                    <p
+                      class="absolute bottom-[6px] left-[22px] border-2 border-white p-[4px] bg-green-500 rounded-full"
+                    ></p>
+                    <figure class="space-y-0">
+                      <h2
+                        class="text-[16px] pb-0 text-gray-700 font-medium tracking-normal"
+                      >
+                        Programming with Mosh
+                      </h2>
+                      <div class="flex items-center space-x-1">
+                        <p class="text-[12px] pt-0 font-semibold text-gray-400">
+                          1d .
+                        </p>
+                        <span class="xuxw1ft"
+                          ><span
+                            class="x4k7w5x x1h91t0o x1h9r5lt x1jfb8zj xv2umb2 x1beo9mf xaigb6o x12ejxvf x3igimt xarpa2k xedcshv x1lytzrv x1t2pt76 x7ja8zs x1qrby5j"
+                            ><span class="x1rg5ohu x1n2onr6 xs7f9wi"
+                              ><svg
+                                viewBox="0 0 16 16"
+                                width="12"
+                                height="12"
+                                fill="currentColor"
+                                title="Shared with Public"
+                                class="x19dipnz x1lliihq x1k90msu x2h7rmj x1qfuztq"
+                                style="--color: var(--secondary-icon)"
+                              >
+                                <title>Shared with Public</title>
+                                <g
+                                  fill-rule="evenodd"
+                                  transform="translate(-448 -544)"
+                                >
+                                  <g>
+                                    <path
+                                      d="M109.5 408.5c0 3.23-2.04 5.983-4.903 7.036l.07-.036c1.167-1 1.814-2.967 2-3.834.214-1 .303-1.3-.5-1.96-.31-.253-.677-.196-1.04-.476-.246-.19-.356-.59-.606-.73-.594-.337-1.107.11-1.954.223a2.666 2.666 0 0 1-1.15-.123c-.007 0-.007 0-.013-.004l-.083-.03c-.164-.082-.077-.206.006-.36h-.006c.086-.17.086-.376-.05-.529-.19-.214-.54-.214-.804-.224-.106-.003-.21 0-.313.004l-.003-.004c-.04 0-.084.004-.124.004h-.037c-.323.007-.666-.034-.893-.314-.263-.353-.29-.733.097-1.09.28-.26.863-.8 1.807-.22.603.37 1.166.667 1.666.5.33-.11.48-.303.094-.87a1.128 1.128 0 0 1-.214-.73c.067-.776.687-.84 1.164-1.2.466-.356.68-.943.546-1.457-.106-.413-.51-.873-1.28-1.01a7.49 7.49 0 0 1 6.524 7.434"
+                                      transform="translate(354 143.5)"
+                                    ></path>
+                                    <path
+                                      d="M104.107 415.696A7.498 7.498 0 0 1 94.5 408.5a7.48 7.48 0 0 1 3.407-6.283 5.474 5.474 0 0 0-1.653 2.334c-.753 2.217-.217 4.075 2.29 4.075.833 0 1.4.561 1.333 2.375-.013.403.52 1.78 2.45 1.89.7.04 1.184 1.053 1.33 1.74.06.29.127.65.257.97a.174.174 0 0 0 .193.096"
+                                      transform="translate(354 143.5)"
+                                    ></path>
+                                    <path
+                                      fill-rule="nonzero"
+                                      d="M110 408.5a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-1 0a7 7 0 1 0-14 0 7 7 0 0 0 14 0z"
+                                      transform="translate(354 143.5)"
+                                    ></path>
+                                  </g>
+                                </g></svg></span></span
+                          ><!--$--><!--/$--></span
+                        >
+                      </div>
+                    </figure>
+                  </div>
+                  <!-- xcross option -->
+                  <div class="flex items-center space-x-3">
+                    <h2
+                      class="text-2xl pb-5 text-gray-500 font-bold cursor-pointer"
+                    >
+                      ...
+                    </h2>
+                    <div>
+                      <a
+                        aria-label="hide post"
+                        class="x1i10hfl x1ejq31n xd10rxx x1sy0etr x17r0tee x1ypdohk xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r x16tdsg8 x1hl2dhg xggy1nq x87ps6o x1lku1pv x1a2a7pz x6s0dn4 x14yjl9h xudhj91 x18nykt9 xww2gxu x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x78zum5 xl56j7k xexx8yu x4uap5 x18d9i69 xkhd6sd x1n2onr6 xc9qbxq x14qfxbe xjbqb8w"
+                        href="#"
+                        role="link"
+                        tabindex="0"
+                        class=""
+                        ><i
+                          data-visualcompletion="css-img"
+                          class="x1b0d499 x1d69dk1"
+                          style="
+                            background-position: 0 -473px;
+                            background-size: auto;
+                            width: 20px;
+                            height: 20px;
+                            background-repeat: no-repeat;
+                            display: inline-block;
+                          "
+                        ></i>
+                        <div
+                          class="text-gray-500 x1ey2m1c xds687c x17qophe xg01cxk x47corl x10l6tqk x13vifvy x1ebt8du x19991ni x1dhq9h xzolkzo x12go9s9 x1rnf11y xprq8jg"
+                          role="none"
+                          data-visualcompletion="ignore"
+                        ></div
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- post text -->
+                <div dir="auto" style="text-align: start" class="px-2 pb-2">
+                  Freaking out about AI taking coding jobs? My new video tackles
+                  the REAL impact of AI on software jobs + skills you need to
+                  focus on – it's coming tomorrow! Don't miss it! Watch it here:
+                  <span
+                    ><a
+                      class="text-blue-600 x1i10hfl xjbqb8w x1ejq31n xd10rxx x1sy0etr x17r0tee x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x1ypdohk xt0psk2 xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 x1hl2dhg xggy1nq x1a2a7pz xt0b8zv x1fey0fg"
+                      href="https://buff.ly/4afgix7?fbclid=IwAR1Qsn8asqmfmB2sSkVULSx2r5Zryos26BeXDTV5TeQzjle4_QLpcO1IKaY"
+                      rel="nofollow noreferrer"
+                      role="link"
+                      tabindex="0"
+                      target="_blank"
+                      >https://buff.ly/4afgix7</a
+                    ></span
+                  >
+                </div>
+
+                <!-- image -->
+                <div class="border border-l-0 border-r-0 border-gray-300">
+                  <img class="w-full" src="/images/mosh.jpg" alt="" />
+                </div>
+                <!-- images bottom -->
+                <div>
+                  <!-- react -->
+                  <div class="px-4 py-2 flex items-center justify-between">
+                    <div class="flex items-center space-x-0 bg-white">
+                      <img
+                        class="w-5 h-5 -mr-[1px] bg-white"
+                        src="/images/like.jpg"
+                        alt=""
+                      />
+                      <img
+                        class="w-5 h-5 bg-white"
+                        src="/images/heart.png"
+                        alt=""
+                      />
+                      <h2 class="pl-1 text-base font-normal text-[#898A8D]">
+                        Qasim and 235 others
+                      </h2>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                      <div class="flex items-center">
+                        <h2 class="mr-1 text-base font-normal text-[#898A8D]">
+                          5
+                        </h2>
+                        <img class="w-5 h-5" src="/images/comment.png" alt="" />
+                      </div>
+                      <div class="flex items-center">
+                        <h2 class="mr-1 text-base font-normal text-[#898A8D]">
+                          13
+                        </h2>
+                        <img class="w-5 h-5" src="/images/share.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <!-- border -->
+                  <p class="border-b border-gray-200 mx-4"></p>
+                  <!-- like and commands -->
+                  <div
+                    class="px-4 py-2 flex items-center justify-center space-x-20"
+                  >
+                    <div class="flex items-center space-x-1">
+                      <img
+                        class="w-5 h-5 -mr-2"
+                        src="/images/icons8-like-96.png"
+                        alt=""
+                      />
+
+                      <h2 class="pl-2 text-base font-medium text-[#898A8D]">
+                        Like
+                      </h2>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                      <img
+                        class="w-5 h-5 -mr-2"
+                        src="/images/comment1.png"
+                        alt=""
+                      />
+
+                      <h2 class="pl-2 text-base font-medium text-[#898A8D]">
+                        Comment
+                      </h2>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                      <img
+                        class="w-5 h-5 -mr-2"
+                        src="/images/share1.png"
+                        alt=""
+                      />
+
+                      <h2 class="pl-2 text-base font-medium text-[#898A8D]">
+                        Share
+                      </h2>
+                    </div>
+                  </div>
+                  <!-- border -->
+                  <p class="border-b border-gray-200 mx-3"></p>
+                </div>
+
+                <!-- veiw comments -->
+                <div class="px-5 py-2">
+                  <h2 class="text-[16px] pb-2 font-semibold text-gray-400">
+                    Veiw more comments.
+                  </h2>
+                  <div>
+                    <div class="flex space-x-2">
+                      <img
+                        class="w-10 h-10 rounded-full"
+                        src="images/Ali-programmer.jpg"
+                        alt=""
+                      />
+                      <div>
+                        <div class="p-1 bg-[#f0f2f5] px-2 rounded-xl">
+                          <h2
+                            class="text-[14px] pb-0 text-gray-900 font-medium tracking-normal"
+                          >
+                            Asghar Ali
+                          </h2>
+                          <h2 class="text-[14px] pt-0 text-gray-900">
+                            Waiting❤️
+                          </h2>
+                        </div>
+                        <div class="flex items-center space-x-5 pl-1">
+                          <p
+                            class="text-[12px] pt-0 font-semibold text-gray-500"
+                          >
+                            12h
+                          </p>
+                          <p class="text-[12px] pt-0 font-bold text-gray-500">
+                            Like
+                          </p>
+                          <p class="text-[12px] pt-0 font-bold text-gray-500">
+                            Rply
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- give commmit -->
+                <div class="px-5 flex items-center space-x-2 py-2">
+                  <div class="relative rounded-full cursor-pointer bg-gray-200">
+                    <img
+                      class="bg-blue-800 rounded-full w-[42px] h-9"
+                      src="/images/admin-asghar.png"
+                      alt=""
+                    />
+
+                    <div
+                      class="flex items-center absolute w-4 h-4 top-[26px] left-[25px] px-[1px] border-white border-2 bg-gray-200 rounded-full"
+                    >
+                      <img
+                        class="text-white w-full"
+                        src="images/down.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <input
+                    class="bg-[#f0f2f5] text-[15x] placeholder:text-gray-500 rounded-full w-full h-9 px-3 focus:outline-none"
+                    type="text"
+                    placeholder="write a comment..."
+                  />
+                </div>
+              </div>
+            </div>
+
+            <section class="bg-white pb-6">
+              <div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+                <div class="container mx-auto px-6 p-6 bg-white">
+                  <div class="mb-16 text-center">
+                    <h4
+                      class="text-base text-indigo-600 font-semibold tracking-wide uppercase"
+                    >
+                      Features
+                    </h4>
+                    <p
+                      class="mt-2 text-5xl lg:text-7xl font-bold tracking-tight text-gray-900"
+                    >
+                      How we change the game
+                    </p>
+                  </div>
+
+                  <div class="flex flex-wrap my-12">
+                    <div
+                      class="w-full border-b md:w-1/2 md:border-r lg:w-1/3 p-8"
+                    >
+                      <div class="flex items-center mb-6">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 32 32"
+                          width="20"
+                          height="20"
+                          fill="currentColor"
+                          class="h-6 w-6 text-indigo-500"
+                        >
+                          <path
+                            d="M16 3C8.8 3 3 8.8 3 16s5.8 13 13 13 13-5.8 13-13c0-1.398-.188-2.793-.688-4.094L26.688 13.5c.2.8.313 1.602.313 2.5 0 6.102-4.898 11-11 11S5 22.102 5 16 9.898 5 16 5c3 0 5.695 1.195 7.594 3.094L25 6.688C22.7 4.386 19.5 3 16 3zm11.281 4.281L16 18.563l-4.281-4.282-1.438 1.438 5 5 .719.687.719-.687 12-12z"
+                          ></path>
+                        </svg>
+                        <div class="ml-4 text-xl">Increase sales</div>
+                      </div>
+                      <p class="leading-loose text-gray-500">
+                        Consectetur pariatur irure exercitation sit amet id
+                        consectetur consecteturmagna et Lorem labore qui velit.
+                      </p>
+                    </div>
+
+                    <div
+                      class="w-full border-b md:w-1/2 lg:w-1/3 lg:border-r p-8"
+                    >
+                      <div class="flex items-center mb-6">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 32 32"
+                          width="20"
+                          height="20"
+                          fill="currentColor"
+                          class="h-6 w-6 text-indigo-500"
+                        >
+                          <path
+                            d="M16 3C8.8 3 3 8.8 3 16s5.8 13 13 13 13-5.8 13-13c0-1.398-.188-2.793-.688-4.094L26.688 13.5c.2.8.313 1.602.313 2.5 0 6.102-4.898 11-11 11S5 22.102 5 16 9.898 5 16 5c3 0 5.695 1.195 7.594 3.094L25 6.688C22.7 4.386 19.5 3 16 3zm11.281 4.281L16 18.563l-4.281-4.282-1.438 1.438 5 5 .719.687.719-.687 12-12z"
+                          ></path>
+                        </svg>
+                        <div class="ml-4 text-xl">Enterprise-ready</div>
+                      </div>
+                      <p class="leading-loose text-gray-500">
+                        Labore duis pariatur est exercitation laboris cupidatat
+                        amet cillum. Amet nisi ullamco.
+                      </p>
+                    </div>
+
+                    <div
+                      class="w-full border-b md:w-1/2 md:border-r lg:w-1/3 lg:border-r-0 p-8"
+                    >
+                      <div class="flex items-center mb-6">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 32 32"
+                          width="20"
+                          height="20"
+                          fill="currentColor"
+                          class="h-6 w-6 text-indigo-500"
+                        >
+                          <path
+                            d="M16 3C8.8 3 3 8.8 3 16s5.8 13 13 13 13-5.8 13-13c0-1.398-.188-2.793-.688-4.094L26.688 13.5c.2.8.313 1.602.313 2.5 0 6.102-4.898 11-11 11S5 22.102 5 16 9.898 5 16 5c3 0 5.695 1.195 7.594 3.094L25 6.688C22.7 4.386 19.5 3 16 3zm11.281 4.281L16 18.563l-4.281-4.282-1.438 1.438 5 5 .719.687.719-.687 12-12z"
+                          ></path>
+                        </svg>
+                        <div class="ml-4 text-xl">Unlimited growth</div>
+                      </div>
+                      <p class="leading-loose text-gray-500">
+                        Elit deserunt nisi esse duis cupidatat proident sit
+                        minim mollit officia pariatur incididunt in tempor.
+                      </p>
+                    </div>
+
+                    <div
+                      class="w-full border-b md:w-1/2 lg:w-1/3 lg:border-r lg:border-b-0 p-8"
+                    >
+                      <div class="flex items-center mb-6">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 32 32"
+                          width="20"
+                          height="20"
+                          fill="currentColor"
+                          class="h-6 w-6 text-indigo-500"
+                        >
+                          <path
+                            d="M16 3C8.8 3 3 8.8 3 16s5.8 13 13 13 13-5.8 13-13c0-1.398-.188-2.793-.688-4.094L26.688 13.5c.2.8.313 1.602.313 2.5 0 6.102-4.898 11-11 11S5 22.102 5 16 9.898 5 16 5c3 0 5.695 1.195 7.594 3.094L25 6.688C22.7 4.386 19.5 3 16 3zm11.281 4.281L16 18.563l-4.281-4.282-1.438 1.438 5 5 .719.687.719-.687 12-12z"
+                          ></path>
+                        </svg>
+                        <div class="ml-4 text-xl">Recommended by experts</div>
+                      </div>
+                      <p class="leading-loose text-gray-500">
+                        Velit sit tempor pariatur quis pariatur incididunt culpa
+                        dolor voluptate officia incididunt velit dolore.
+                      </p>
+                    </div>
+
+                    <div
+                      class="w-full border-b md:w-1/2 md:border-r md:border-b-0 lg:w-1/3 lg:border-b-0 p-8"
+                    >
+                      <div class="flex items-center mb-6">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 32 32"
+                          width="20"
+                          height="20"
+                          fill="currentColor"
+                          class="h-6 w-6 text-indigo-500"
+                        >
+                          <path
+                            d="M16 3C8.8 3 3 8.8 3 16s5.8 13 13 13 13-5.8 13-13c0-1.398-.188-2.793-.688-4.094L26.688 13.5c.2.8.313 1.602.313 2.5 0 6.102-4.898 11-11 11S5 22.102 5 16 9.898 5 16 5c3 0 5.695 1.195 7.594 3.094L25 6.688C22.7 4.386 19.5 3 16 3zm11.281 4.281L16 18.563l-4.281-4.282-1.438 1.438 5 5 .719.687.719-.687 12-12z"
+                          ></path>
+                        </svg>
+                        <div class="ml-4 text-xl">Modern platform</div>
+                      </div>
+                      <p class="leading-loose text-gray-500">
+                        Laboris elit consectetur sint nisi eu mollit proident
+                        sit magna velit adipisicing consequat amet
+                        reprehenderit.
+                      </p>
+                    </div>
+
+                    <div class="w-full md:w-1/2 lg:w-1/3 p-8">
+                      <div class="flex items-center mb-6">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 32 32"
+                          width="20"
+                          height="20"
+                          fill="currentColor"
+                          class="h-6 w-6 text-indigo-500"
+                        >
+                          <path
+                            d="M16 3C8.8 3 3 8.8 3 16s5.8 13 13 13 13-5.8 13-13c0-1.398-.188-2.793-.688-4.094L26.688 13.5c.2.8.313 1.602.313 2.5 0 6.102-4.898 11-11 11S5 22.102 5 16 9.898 5 16 5c3 0 5.695 1.195 7.594 3.094L25 6.688C22.7 4.386 19.5 3 16 3zm11.281 4.281L16 18.563l-4.281-4.282-1.438 1.438 5 5 .719.687.719-.687 12-12z"
+                          ></path>
+                        </svg>
+                        <div class="ml-4 text-xl">Integrations</div>
+                      </div>
+                      <p class="leading-loose text-gray-500">
+                        Nostrud excepteur incididunt proident sit nulla ipsum
+                        sunt nostrud est esse adipisicing irure officia
+                        consectetur.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <!-- 3rd//right section -->
+        <div class="w-[48%] container mx-auto hidden lg:block">
+          <div
+            class="pl-8 hover:pr-2 pr-4 fixed right-0 h-[33rem] hover:overflow-y-scroll w-[320px] bg-gray-100 custom-scrollbar"
+          >
+            <!-- 1st peace -->
+            <div class="space-y-1">
+              <!-- tittle -->
+              <div
+                class="flex justify-between items-center space-x-3 mb-1 py-2 rounded-md cursor-pointer"
+              >
+                <h2 class="text-[17px] text-gray-500 font-medium">
+                  Your Pages and profiles
+                </h2>
+                <h2 class="text-xl text-gray-400 font-bold pb-2 cursor-pointer">
+                  ...
+                </h2>
+              </div>
+
+              <div class="border-solid border-gray-300 border-b-[1px]"></div>
+              <!-- friend request sec -->
+              <div class="space-y-1 pt-1">
+                <div
+                  class="flex justify-between items-center rounded-md cursor-pointer"
+                >
+                  <h2 class="text-[17px] text-gray-500 font-semibold">
+                    Friend requests
+                  </h2>
+                  <h2
+                    class="text-base text-blue-600 font-normal pb-2 cursor-pointer"
+                  >
+                    See all
+                  </h2>
+                </div>
+
+                <div class="py-2 flex items-center space-x-3 w-full">
+                  <div>
+                    <img
+                      class="shadow w-10 h-10 rounded-full"
+                      src="/images/Ali-programmer.jpg"
+                      alt=""
+                    />
+                  </div>
+
+                  <div class="flex justify-between space-x-14">
+                    <dd>
+                      <h2
+                        class="text-[16px] cursor-pointer pb-[1px] text-gray-700 font-semibold"
+                      >
+                        Ali Programmer
+                      </h2>
+                      <figcaption class="flex items-center space-x-1">
+                        <div class="flex items-center cursor-pointer">
+                          <img
+                            class="w-4 h-4 rounded-full cursor-pointer"
+                            src="/images/admin-asghar.png"
+                            alt=""
+                          />
+                          <img
+                            class="w-4 h-4 rounded-full cursor-pointer"
+                            src="/images/blog1.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <h2
+                          class="text-xs text-gray-400 font-medium cursor-pointer"
+                        >
+                          10 mutual Friends
+                        </h2>
+                      </figcaption>
+                    </dd>
+                    <dd class="flex">
+                      <h2
+                        class="text-sm text-gray-500 font-normal cursor-pointer"
+                      >
+                        12h
+                      </h2>
+                    </dd>
+                  </div>
+                </div>
+              </div>
+              <!-- button sectin -->
+              <div class="flex items-center justify-end space-x-5 pb-4">
+                <button
+                  class="shadow text-base font-medium text-white bg-blue-500 px-6 py-[6px] rounded-md"
+                >
+                  Confirm
+                </button>
+                <button
+                  class="shadow-md text-base font-medium text-gray-800 bg-gray-200 px-6 py-[6px] rounded-md"
+                >
+                  Delete
+                </button>
+              </div>
+              <!-- line -->
+              <div class="border-solid border-gray-300 border-b-[1px]"></div>
+            </div>
+
+            <!-- 2nd peace -->
+            <div>
+              <h2 class="text-lg text-gray-500 font-medium pt-[10px] pb-[4px]">
+                Birthdays
+              </h2>
+              <!-- birth sec -->
+              <div
+                class="flex items-center space-x-3 p-2 hover:bg-gray-200 rounded-md cursor-pointer"
+              >
+                <img
+                  class="rounded w-7 h-7 mb-2"
+                  src="/images/gift-box.png"
+                  alt=""
+                />
+                <h2 class="text-sm text-gray-600 pr-2">
+                  <span class="text-[15px] font-semibold text-gray-800"
+                    >Ahmed Faraz Channa</span
+                  >
+                  and
+                  <span class="text-[16px] font-semibold text-gray-800">
+                    2 others</span
+                  >
+                  have Birthdays today.
+                </h2>
+              </div>
+
+              <!-- line -->
+              <div
+                class="border-solid border-gray-300 border-b-[1px] mt-2"
+              ></div>
+
+              <!-- online peoples -->
+              <div>
+                <!-- contact -->
+                <div class="flex items-center justify-between">
+                  <h2
+                    class="text-lg text-gray-500 font-medium pt-[10px] pb-[4px]"
+                  >
+                    Contacts
+                  </h2>
+                  <div class="flex items-center space-x-4">
+                    <img
+                      class="w-4 h-4 mt-1"
+                      src="/images/search-interface-symbol.png"
+                      alt=""
+                    />
+                    <h2
+                      class="text-xl text-gray-500 font-bold pb-2 cursor-pointer"
+                    >
+                      ...
+                    </h2>
+                  </div>
+                </div>
+
+                <div
+                  class="relative flex items-center space-x-2 pl-2 hover:bg-gray-200 py-2 rounded-md cursor-pointer"
+                >
+                  <img
+                    class="bg-blue-800 rounded-full w-7 h-7"
+                    src="/images/shahnawaz.jpg"
+                    alt=""
+                  />
+                  <p
+                    class="absolute bottom-[9px] left-[22px] border border-white p-[3px] bg-green-500 rounded-full"
+                  ></p>
+                  <h2 class="text-[15px] text-gray-700 font-semibold">
+                    Shahnawaz Burdi
+                  </h2>
+                </div>
+
+                <div
+                  class="relative flex items-center space-x-2 pl-2 hover:bg-gray-200 py-2 rounded-md cursor-pointer"
+                >
+                  <img
+                    class="bg-blue-800 rounded-full w-7 h-7"
+                    src="/images/younis.jpg"
+                    alt=""
+                  />
+                  <p
+                    class="absolute bottom-[9px] left-[22px] border border-white p-[3px] bg-green-500 rounded-full"
+                  ></p>
+                  <h2 class="text-[15px] text-gray-700 font-semibold">
+                    Younis Burdi
+                  </h2>
+                </div>
+
+                <div
+                  class="relative flex items-center space-x-2 pl-2 hover:bg-gray-200 py-2 rounded-md cursor-pointer"
+                >
+                  <img
+                    class="bg-blue-800 rounded-full w-7 h-7"
+                    src="/images/sirtaj.jpg"
+                    alt=""
+                  />
+                  <p
+                    class="absolute bottom-[9px] left-[22px] border border-white p-[3px] bg-green-500 rounded-full"
+                  ></p>
+                  <h2 class="text-[15px] text-gray-700 font-semibold">
+                    Sartaj Khaskeli
+                  </h2>
+                </div>
+
+                <div
+                  class="relative flex items-center space-x-2 pl-2 hover:bg-gray-200 py-2 rounded-md cursor-pointer"
+                >
+                  <img
+                    class="bg-blue-800 rounded-full w-7 h-7"
+                    src="/images/arshad.jpg"
+                    alt=""
+                  />
+                  <p
+                    class="absolute bottom-[9px] left-[22px] border border-white p-[3px] bg-green-500 rounded-full"
+                  ></p>
+                  <h2 class="text-[15px] text-gray-700 font-semibold">
+                    Arshad Ali Burdi
+                  </h2>
+                </div>
+
+                <div
+                  class="relative flex items-center space-x-2 pl-2 hover:bg-gray-200 py-2 rounded-md cursor-pointer"
+                >
+                  <img
+                    class="bg-blue-800 rounded-full w-7 h-7"
+                    src="/images/sardar.jpg"
+                    alt=""
+                  />
+                  <p
+                    class="absolute bottom-[9px] left-[22px] border border-white p-[3px] bg-green-500 rounded-full"
+                  ></p>
+                  <h2 class="text-[15px] text-gray-700 font-semibold">
+                    Sardar Roshan Ali
+                  </h2>
+                </div>
+
+                <div
+                  class="relative flex items-center space-x-2 pl-2 hover:bg-gray-200 py-2 rounded-md cursor-pointer"
+                >
+                  <img
+                    class="bg-blue-800 rounded-full w-7 h-7"
+                    src="/images/ismail.jpg"
+                    alt=""
+                  />
+                  <p
+                    class="absolute bottom-[9px] left-[22px] border border-white p-[3px] bg-green-500 rounded-full"
+                  ></p>
+                  <h2 class="text-[15px] text-gray-700 font-semibold">
+                    Mohammad Ismail Burdi
+                  </h2>
+                </div>
+
+                <div
+                  class="relative flex items-center space-x-2 pl-2 hover:bg-gray-200 py-2 rounded-md cursor-pointer"
+                >
+                  <img
+                    class="bg-blue-800 rounded-full w-7 h-7"
+                    src="/images/shahzar.jpg"
+                    alt=""
+                  />
+                  <p
+                    class="absolute bottom-[9px] left-[22px] border border-white p-[3px] bg-green-500 rounded-full"
+                  ></p>
+                  <h2 class="text-[15px] text-gray-700 font-semibold">
+                    shazer Akhtar Lakho
+                  </h2>
+                </div>
+
+                <div
+                  class="relative flex items-center space-x-2 pl-2 hover:bg-gray-200 py-2 rounded-md cursor-pointer"
+                >
+                  <img
+                    class="bg-blue-800 rounded-full w-7 h-7"
+                    src="/images/imtiaz.jpg"
+                    alt=""
+                  />
+                  <p
+                    class="absolute bottom-[9px] left-[22px] border border-white p-[3px] bg-green-500 rounded-full"
+                  ></p>
+                  <h2 class="text-[15px] text-gray-700 font-semibold">
+                    Imtiaz Hussain
+                  </h2>
+                </div>
+
+                <div
+                  class="relative flex items-center space-x-2 pl-2 hover:bg-gray-200 py-2 rounded-md cursor-pointer"
+                >
+                  <img
+                    class="bg-blue-800 rounded-full w-7 h-7"
+                    src="/images/kaif.jpg"
+                    alt=""
+                  />
+                  <p
+                    class="absolute bottom-[9px] left-[22px] border border-white p-[3px] bg-green-500 rounded-full"
+                  ></p>
+                  <h2 class="text-[15px] text-gray-700 font-semibold">
+                    Mohammad Ibrahim
+                  </h2>
+                </div>
+
+                <div
+                  class="relative flex items-center space-x-2 pl-2 hover:bg-gray-200 py-2 rounded-md cursor-pointer"
+                >
+                  <img
+                    class="bg-blue-800 rounded-full w-7 h-7"
+                    src="/images/manthar.jpg"
+                    alt=""
+                  />
+                  <p
+                    class="absolute bottom-[9px] left-[22px] border border-white p-[3px] bg-green-500 rounded-full"
+                  ></p>
+                  <h2 class="text-[15px] text-gray-700 font-semibold">
+                    Manthar Channa
+                  </h2>
+                </div>
+
+                <div
+                  class="relative flex items-center space-x-2 pl-2 hover:bg-gray-200 py-2 rounded-md cursor-pointer"
+                >
+                  <img
+                    class="bg-blue-800 rounded-full w-7 h-7"
+                    src="/images/aijaz.jpg"
+                    alt=""
+                  />
+                  <p
+                    class="absolute bottom-[9px] left-[22px] border border-white p-[3px] bg-green-500 rounded-full"
+                  ></p>
+                  <h2 class="text-[15px] text-gray-700 font-semibold">
+                    Aijaz Ali Burdi
+                  </h2>
+                </div>
+
+                <div
+                  class="relative flex items-center space-x-2 pl-2 hover:bg-gray-200 py-2 rounded-md cursor-pointer"
+                >
+                  <img
+                    class="bg-blue-800 rounded-full w-7 h-7"
+                    src="/images/tariq.jpg"
+                    alt=""
+                  />
+                  <p
+                    class="absolute bottom-[9px] left-[22px] border border-white p-[3px] bg-green-500 rounded-full"
+                  ></p>
+                  <h2 class="text-[15px] text-gray-700 font-semibold">
+                    Tariq Hussain Buledi
+                  </h2>
+                </div>
+
+                <div
+                  class="relative flex items-center space-x-2 pl-2 hover:bg-gray-200 py-2 rounded-md cursor-pointer"
+                >
+                  <img
+                    class="bg-blue-800 rounded-full w-7 h-7"
+                    src="/images/razzaq.jpg"
+                    alt=""
+                  />
+                  <p
+                    class="absolute bottom-[9px] left-[22px] border border-white p-[3px] bg-green-500 rounded-full"
+                  ></p>
+                  <h2 class="text-[15px] text-gray-700 font-semibold">
+                    Abdul Razzaq Burdi
+                  </h2>
+                </div>
+
+                <div
+                  class="relative flex items-center space-x-2 pl-2 hover:bg-gray-200 py-2 rounded-md cursor-pointer"
+                >
+                  <img
+                    class="bg-blue-800 rounded-full w-7 h-7"
+                    src="/images/aman.jpg"
+                    alt=""
+                  />
+                  <p
+                    class="absolute bottom-[9px] left-[22px] border border-white p-[3px] bg-green-500 rounded-full"
+                  ></p>
+                  <h2 class="text-[15px] text-gray-700 font-semibold">
+                    Aman Gul Panhwar
+                  </h2>
+                </div>
+
+                <div
+                  class="relative flex items-center space-x-2 pl-2 hover:bg-gray-200 py-2 rounded-md cursor-pointer"
+                >
+                  <img
+                    class="bg-blue-800 rounded-full w-7 h-7"
+                    src="/images/ahsan.jpg"
+                    alt=""
+                  />
+                  <p
+                    class="absolute bottom-[9px] left-[22px] border border-white p-[3px] bg-green-500 rounded-full"
+                  ></p>
+                  <h2 class="text-[15px] text-gray-700 font-semibold">
+                    Ahsan Marri
+                  </h2>
+                </div>
+
+                <div
+                  class="relative flex items-center space-x-2 pl-2 hover:bg-gray-200 py-2 rounded-md cursor-pointer"
+                >
+                  <img
+                    class="bg-blue-800 rounded-full w-7 h-7"
+                    src="/images/murad-ali.jpg"
+                    alt=""
+                  />
+                  <p
+                    class="absolute bottom-[9px] left-[22px] border border-white p-[3px] bg-green-500 rounded-full"
+                  ></p>
+                  <h2 class="text-[15px] text-gray-700 font-semibold">
+                    Murad Ali Brohi
+                  </h2>
+                </div>
+
+                <div
+                  class="relative flex items-center space-x-2 pl-2 hover:bg-gray-200 py-2 rounded-md cursor-pointer"
+                >
+                  <img
+                    class="bg-blue-800 rounded-full w-7 h-7"
+                    src="/images/Fatima-Baloch.jpg"
+                    alt=""
+                  />
+                  <p
+                    class="absolute bottom-[9px] left-[22px] border border-white p-[3px] bg-green-500 rounded-full"
+                  ></p>
+                  <h2 class="text-[15px] text-gray-700 font-semibold">
+                    Fatima Baloch
+                  </h2>
+                </div>
+
+                <div
+                  class="relative flex items-center space-x-2 pl-2 hover:bg-gray-200 py-2 rounded-md cursor-pointer"
+                >
+                  <img
+                    class="bg-blue-800 rounded-full w-7 h-7"
+                    src="/images/Ali-programmer.jpg"
+                    alt=""
+                  />
+                  <p
+                    class="absolute bottom-[9px] left-[22px] border border-white p-[3px] bg-green-500 rounded-full"
+                  ></p>
+                  <h2 class="text-[15px] text-gray-700 font-semibold">
+                    Ali Programmer
+                  </h2>
+                </div>
+
+                <div
+                  class="relative flex items-center space-x-2 pl-2 hover:bg-gray-200 py-2 rounded-md cursor-pointer"
+                >
+                  <img
+                    class="bg-blue-800 rounded-full w-7 h-7"
+                    src="/images/team-member-1-300x300.jpg"
+                    alt=""
+                  />
+                  <p
+                    class="absolute bottom-[9px] left-[22px] border border-white p-[3px] bg-green-500 rounded-full"
+                  ></p>
+                  <h2 class="text-[15px] text-gray-700 font-semibold">
+                    Qurtlain Baloch
+                  </h2>
+                </div>
+
+                <div
+                  class="relative flex items-center space-x-2 pl-2 hover:bg-gray-200 py-2 rounded-md cursor-pointer"
+                >
+                  <img
+                    class="bg-blue-800 rounded-full w-7 h-7"
+                    src="/images/syeda.jpg"
+                    alt=""
+                  />
+                  <p
+                    class="absolute bottom-[9px] left-[22px] border border-white p-[3px] bg-green-500 rounded-full"
+                  ></p>
+                  <h2 class="text-[15px] text-gray-700 font-semibold">
+                    Syed Zulekha
+                  </h2>
+                </div>
+              </div>
+
+              <!-- group converstaion -->
+              <div>
+                <!-- line -->
+                <div
+                  class="border-solid border-gray-300 border-b-[1px] mt-2"
+                ></div>
+
+                <h2
+                  class="text-lg text-gray-500 font-medium pt-[10px] pb-[4px]"
+                >
+                  Group converstaions
+                </h2>
+
+                <div class="flex items-center space-x-2 py-2">
+                  <p
+                    class="text-xl text-gray-800 bg-gray-200 rounded-full font-medium px-2"
+                  >
+                    +
+                  </p>
+                  <h2 class="text-base text-gray-800 font-semibold">
+                    Create new group
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="module" src="/main.js"></script>
+    <script>
+      let likeButton = document.getElementById("likeButton");
+      let likeIcon = document.getElementById("likeIcon");
+      let likeCount = document.getElementById("likeCount");
+
+      let count = 50; // Initial like count
+
+      likeButton.addEventListener("click", function () {
+        count++;
+        likeCount.textContent = `Sonu and ${count} others`;
+      });
+
+      // 1tap
+      function firstTap() {
+        const firstButton = document.getElementById("firstTapSection");
+
+        if (firstButton.style.display === "none") {
+          firstButton.style.display = "block";
+        } else {
+          firstButton.style.display = "none";
+        }
+      }
+
+      // 2tap
+      function secondTap() {
+        const secondButton = document.getElementById("secondTapSection");
+
+        if (secondButton.style.display === "none") {
+          secondButton.style.display = "block";
+        } else {
+          secondButton.style.display = "none";
+        }
+      }
+
+      // 3tap
+      function thridTap() {
+        const thridButton = document.getElementById("thridTapSection");
+
+        if (thridButton.style.display === "none") {
+          thridButton.style.display = "block";
+        } else {
+          thridButton.style.display = "none";
+        }
+      }
+
+      // 4th
+      function fourthTap() {
+        const fourthButton = document.getElementById("fourthTapSection");
+
+        if (fourthButton.style.display === "none") {
+          fourthButton.style.display = "block";
+        } else {
+          fourthButton.style.display = "none";
+        }
+      }
+
+      // 5th
+      function fivethTap() {
+        const fivethButton = document.getElementById("fivethTapSection");
+
+        if (fivethButton.style.display === "none") {
+          fivethButton.style.display = "block";
+        } else {
+          fivethButton.style.display = "none";
+        }
+      }
+
+      function buyButton() {
+        const animatedImage = document.getElementById("beeImage");
+
+        if (animatedImage.style.animation === "none") {
+          animatedImage.style.animation = "spin";
+        } else {
+          animatedImage.style.animation = "none";
+        }
+      }
+    </script>
+
+    <!-- horizonat tab script -->
+    <script>
+      // 1tap
+      function recentTabbutton() {
+        const firstButton = document.getElementById("recentTab");
+
+        if (firstButton.style.display === "none") {
+          firstButton.style.display = "block";
+        } else {
+          firstButton.style.display = "none";
+        }
+      }
+
+      // 2ndrtap
+      function featureTabbutton() {
+        const firstButton = document.getElementById("featureTab");
+
+        if (firstButton.style.display === "none") {
+          firstButton.style.display = "block";
+        } else {
+          firstButton.style.display = "none";
+        }
+      }
+
+      // 3rtap
+      function brandedTabbutton() {
+        const firstButton = document.getElementById("brandedTab");
+
+        if (firstButton.style.display === "none") {
+          firstButton.style.display = "block";
+        } else {
+          firstButton.style.display = "none";
+        }
+      }
+
+      // 4th
+      function latestTabbutton() {
+        const firstButton = document.getElementById("latestTab");
+
+        if (firstButton.style.display === "none") {
+          firstButton.style.display = "block";
+        } else {
+          firstButton.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
