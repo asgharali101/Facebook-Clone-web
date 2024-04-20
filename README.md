@@ -1,4 +1,4 @@
-[Watch the video](https://vimeo.com/855604658)
+[![Custom Thumbnail](https://example.com/high_quality_thumbnail.jpg)](https://vimeo.com/855604658)
 
 # Getting Started with Your Project
 
