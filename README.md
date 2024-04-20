@@ -1,4 +1,4 @@
-[![Video Title](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)
+[![Video Title](https://drive.google.com/file/d/1XuVEHOTx03elFcYndLL5xfbuxfuWa1O_/view?usp=drive_link)
 
 # Getting Started with Your Project
 
