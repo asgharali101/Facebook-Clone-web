@@ -1,4 +1,4 @@
-[![Video](https://i.vimeocdn.com/video/1234567890.jpg)](https://vimeo.com/855604658)
+[Watch the video](https://vimeo.com/855604658)
 
 # Getting Started with Your Project
 
