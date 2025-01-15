@@ -52,6 +52,6 @@ This video showcases the features and functionality of my clone website, which I
 
 <details><summary><strong>Demo of Web</strong></summary><br>
 <video width="350" controls>
-  <source src="./images/websitevideo.mp4" type="video/mp4">
+  <source src="./images/websitevideo.mp4">
 </video>
 </details>
