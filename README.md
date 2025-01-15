@@ -46,5 +46,8 @@ That's it! Your development server is up and running. Open your browser and navi
 
 Happy coding!
 
+### Demo Video
+
 This video showcases the features and functionality of my clone website, which I built using Tailwind CSS and basic JavaScript. In this demo, you'll see how the website replicates the user experience of the original platform, demonstrating its responsiveness, design clarity, and ease of use. Whether you're a developer or end-user, this video provides insight into the capabilities of my clone website.
-[![Video](./images/websitevideo.mp4);
+
+[Watch the demo video](./images/demo-video.mp4)
