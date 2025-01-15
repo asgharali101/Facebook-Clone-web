@@ -7,7 +7,7 @@ Welcome to your new project! Follow these simple steps to get started:
 Open your terminal or command prompt and navigate to the directory where you want to keep your project.
 
 ```bash
-git clone https://github.com/asgharali101/Netflix-Clone-Website
+git clone https://github.com/asgharali101/Facebook-Clone-web
 ```
 
 This command will create a new project using Vite.js.
@@ -17,7 +17,7 @@ This command will create a new project using Vite.js.
 Navigate into the newly created project directory.
 
 ```bash
-cd Netflix-Clone-Website
+cd Facebook-Clone-web
 ```
 
 ## Step 3: Install Dependencies
