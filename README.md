@@ -50,8 +50,8 @@ Happy coding!
 
 This video showcases the features and functionality of my clone website, which I built using Tailwind CSS and basic JavaScript. In this demo, you'll see how the website replicates the user experience of the original platform, demonstrating its responsiveness, design clarity, and ease of use. Whether you're a developer or end-user, this video provides insight into the capabilities of my clone website.
 
-<details><summary><strong>Demo of Web</strong></summary><br>
 <video width="350" controls>
-  <source src="./images/websitevideo.mp4">
+  <source src="./images/websitevideo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
 </video>
-</details>
+
